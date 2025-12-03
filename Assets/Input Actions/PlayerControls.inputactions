@@ -3,40 +3,49 @@
     "name": "PlayerControls",
     "maps": [
         {
-            "name": "Dance",
-            "id": "faf03e2c-0a82-4e25-89a0-30d7e2eed6c1",
+            "name": "Gameplay",
+            "id": "a40ee1b1-d1e2-493c-8620-e7b61d585ec2",
             "actions": [
                 {
-                    "name": "DanceW",
+                    "name": "MoveUp",
                     "type": "Button",
-                    "id": "e11fe2ae-fd6b-43e0-834d-8533df42d9f6",
+                    "id": "fe548c48-ccfa-42da-b135-21c8557aba83",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "DanceA",
+                    "name": "MoveLeft",
                     "type": "Button",
-                    "id": "ff7e754e-3042-475f-b188-e05e57089d1c",
+                    "id": "db0ac6a6-121f-4146-9efa-29d4775f2ded",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "DanceS",
+                    "name": "MoveDown",
                     "type": "Button",
-                    "id": "638e5b4d-eda1-4168-aad8-f513438f8349",
+                    "id": "5020d07e-6c94-4438-9115-77c2ac97d0b6",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "DanceD",
+                    "name": "MoveRight",
                     "type": "Button",
-                    "id": "8f2f4f8d-78e6-443a-ac30-80cb11bb21a8",
+                    "id": "c286096b-149f-4fe3-984c-8ece3d60b0d6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Interact",
+                    "type": "Button",
+                    "id": "304a3bd5-6601-4531-9c7b-4d0338bfa0e0",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -46,45 +55,56 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "11ef3e19-1148-453c-8f92-b7d6c5220abb",
+                    "id": "dfaa473f-4dc4-4a36-8a73-ae331655dba5",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "DanceW",
+                    "action": "MoveUp",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "41671394-07c1-4dfd-8f7b-f8e45a17fdd6",
+                    "id": "15f37665-de0d-4474-8666-0b98653ec8bf",
                     "path": "<Keyboard>/a",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "DanceA",
+                    "action": "MoveLeft",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "a240f9bf-ac35-4207-93f1-9f41d1cc15f8",
+                    "id": "bc3d36d3-14bb-47b8-a7a4-cef7a2d4064f",
                     "path": "<Keyboard>/s",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "DanceS",
+                    "action": "MoveDown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "ecc18e2e-4171-4f08-8c00-98f4bb781db6",
+                    "id": "9af5f0a6-90c5-4743-a9fb-14150261c837",
                     "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "DanceD",
+                    "action": "MoveRight",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7c5a9f39-4e92-4bb5-8a9b-a963b2ca793a",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Interact",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

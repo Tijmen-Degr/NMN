@@ -89,40 +89,49 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     ""name"": ""PlayerControls"",
     ""maps"": [
         {
-            ""name"": ""Dance"",
-            ""id"": ""faf03e2c-0a82-4e25-89a0-30d7e2eed6c1"",
+            ""name"": ""Gameplay"",
+            ""id"": ""a40ee1b1-d1e2-493c-8620-e7b61d585ec2"",
             ""actions"": [
                 {
-                    ""name"": ""DanceW"",
+                    ""name"": ""MoveUp"",
                     ""type"": ""Button"",
-                    ""id"": ""e11fe2ae-fd6b-43e0-834d-8533df42d9f6"",
+                    ""id"": ""fe548c48-ccfa-42da-b135-21c8557aba83"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""DanceA"",
+                    ""name"": ""MoveLeft"",
                     ""type"": ""Button"",
-                    ""id"": ""ff7e754e-3042-475f-b188-e05e57089d1c"",
+                    ""id"": ""db0ac6a6-121f-4146-9efa-29d4775f2ded"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""DanceS"",
+                    ""name"": ""MoveDown"",
                     ""type"": ""Button"",
-                    ""id"": ""638e5b4d-eda1-4168-aad8-f513438f8349"",
+                    ""id"": ""5020d07e-6c94-4438-9115-77c2ac97d0b6"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""DanceD"",
+                    ""name"": ""MoveRight"",
                     ""type"": ""Button"",
-                    ""id"": ""8f2f4f8d-78e6-443a-ac30-80cb11bb21a8"",
+                    ""id"": ""c286096b-149f-4fe3-984c-8ece3d60b0d6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""304a3bd5-6601-4531-9c7b-4d0338bfa0e0"",
                     ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
@@ -132,45 +141,56 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             ""bindings"": [
                 {
                     ""name"": """",
-                    ""id"": ""11ef3e19-1148-453c-8f92-b7d6c5220abb"",
+                    ""id"": ""dfaa473f-4dc4-4a36-8a73-ae331655dba5"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""DanceW"",
+                    ""action"": ""MoveUp"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""41671394-07c1-4dfd-8f7b-f8e45a17fdd6"",
+                    ""id"": ""15f37665-de0d-4474-8666-0b98653ec8bf"",
                     ""path"": ""<Keyboard>/a"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""DanceA"",
+                    ""action"": ""MoveLeft"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a240f9bf-ac35-4207-93f1-9f41d1cc15f8"",
+                    ""id"": ""bc3d36d3-14bb-47b8-a7a4-cef7a2d4064f"",
                     ""path"": ""<Keyboard>/s"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""DanceS"",
+                    ""action"": ""MoveDown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""ecc18e2e-4171-4f08-8c00-98f4bb781db6"",
+                    ""id"": ""9af5f0a6-90c5-4743-a9fb-14150261c837"",
                     ""path"": ""<Keyboard>/d"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""DanceD"",
+                    ""action"": ""MoveRight"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""7c5a9f39-4e92-4bb5-8a9b-a963b2ca793a"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -179,17 +199,18 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // Dance
-        m_Dance = asset.FindActionMap("Dance", throwIfNotFound: true);
-        m_Dance_DanceW = m_Dance.FindAction("DanceW", throwIfNotFound: true);
-        m_Dance_DanceA = m_Dance.FindAction("DanceA", throwIfNotFound: true);
-        m_Dance_DanceS = m_Dance.FindAction("DanceS", throwIfNotFound: true);
-        m_Dance_DanceD = m_Dance.FindAction("DanceD", throwIfNotFound: true);
+        // Gameplay
+        m_Gameplay = asset.FindActionMap("Gameplay", throwIfNotFound: true);
+        m_Gameplay_MoveUp = m_Gameplay.FindAction("MoveUp", throwIfNotFound: true);
+        m_Gameplay_MoveLeft = m_Gameplay.FindAction("MoveLeft", throwIfNotFound: true);
+        m_Gameplay_MoveDown = m_Gameplay.FindAction("MoveDown", throwIfNotFound: true);
+        m_Gameplay_MoveRight = m_Gameplay.FindAction("MoveRight", throwIfNotFound: true);
+        m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
     {
-        UnityEngine.Debug.Assert(!m_Dance.enabled, "This will cause a leak and performance issues, PlayerControls.Dance.Disable() has not been called.");
+        UnityEngine.Debug.Assert(!m_Gameplay.enabled, "This will cause a leak and performance issues, PlayerControls.Gameplay.Disable() has not been called.");
     }
 
     /// <summary>
@@ -262,44 +283,49 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // Dance
-    private readonly InputActionMap m_Dance;
-    private List<IDanceActions> m_DanceActionsCallbackInterfaces = new List<IDanceActions>();
-    private readonly InputAction m_Dance_DanceW;
-    private readonly InputAction m_Dance_DanceA;
-    private readonly InputAction m_Dance_DanceS;
-    private readonly InputAction m_Dance_DanceD;
+    // Gameplay
+    private readonly InputActionMap m_Gameplay;
+    private List<IGameplayActions> m_GameplayActionsCallbackInterfaces = new List<IGameplayActions>();
+    private readonly InputAction m_Gameplay_MoveUp;
+    private readonly InputAction m_Gameplay_MoveLeft;
+    private readonly InputAction m_Gameplay_MoveDown;
+    private readonly InputAction m_Gameplay_MoveRight;
+    private readonly InputAction m_Gameplay_Interact;
     /// <summary>
-    /// Provides access to input actions defined in input action map "Dance".
+    /// Provides access to input actions defined in input action map "Gameplay".
     /// </summary>
-    public struct DanceActions
+    public struct GameplayActions
     {
         private @PlayerControls m_Wrapper;
 
         /// <summary>
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
-        public DanceActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public GameplayActions(@PlayerControls wrapper) { m_Wrapper = wrapper; }
         /// <summary>
-        /// Provides access to the underlying input action "Dance/DanceW".
+        /// Provides access to the underlying input action "Gameplay/MoveUp".
         /// </summary>
-        public InputAction @DanceW => m_Wrapper.m_Dance_DanceW;
+        public InputAction @MoveUp => m_Wrapper.m_Gameplay_MoveUp;
         /// <summary>
-        /// Provides access to the underlying input action "Dance/DanceA".
+        /// Provides access to the underlying input action "Gameplay/MoveLeft".
         /// </summary>
-        public InputAction @DanceA => m_Wrapper.m_Dance_DanceA;
+        public InputAction @MoveLeft => m_Wrapper.m_Gameplay_MoveLeft;
         /// <summary>
-        /// Provides access to the underlying input action "Dance/DanceS".
+        /// Provides access to the underlying input action "Gameplay/MoveDown".
         /// </summary>
-        public InputAction @DanceS => m_Wrapper.m_Dance_DanceS;
+        public InputAction @MoveDown => m_Wrapper.m_Gameplay_MoveDown;
         /// <summary>
-        /// Provides access to the underlying input action "Dance/DanceD".
+        /// Provides access to the underlying input action "Gameplay/MoveRight".
         /// </summary>
-        public InputAction @DanceD => m_Wrapper.m_Dance_DanceD;
+        public InputAction @MoveRight => m_Wrapper.m_Gameplay_MoveRight;
+        /// <summary>
+        /// Provides access to the underlying input action "Gameplay/Interact".
+        /// </summary>
+        public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
-        public InputActionMap Get() { return m_Wrapper.m_Dance; }
+        public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Enable()" />
         public void Enable() { Get().Enable(); }
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.Disable()" />
@@ -307,9 +333,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <inheritdoc cref="UnityEngine.InputSystem.InputActionMap.enabled" />
         public bool enabled => Get().enabled;
         /// <summary>
-        /// Implicitly converts an <see ref="DanceActions" /> to an <see ref="InputActionMap" /> instance.
+        /// Implicitly converts an <see ref="GameplayActions" /> to an <see ref="InputActionMap" /> instance.
         /// </summary>
-        public static implicit operator InputActionMap(DanceActions set) { return set.Get(); }
+        public static implicit operator InputActionMap(GameplayActions set) { return set.Get(); }
         /// <summary>
         /// Adds <see cref="InputAction.started"/>, <see cref="InputAction.performed"/> and <see cref="InputAction.canceled"/> callbacks provided via <param cref="instance" /> on all input actions contained in this map.
         /// </summary>
@@ -317,23 +343,26 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c> or <paramref name="instance"/> have already been added this method does nothing.
         /// </remarks>
-        /// <seealso cref="DanceActions" />
-        public void AddCallbacks(IDanceActions instance)
+        /// <seealso cref="GameplayActions" />
+        public void AddCallbacks(IGameplayActions instance)
         {
-            if (instance == null || m_Wrapper.m_DanceActionsCallbackInterfaces.Contains(instance)) return;
-            m_Wrapper.m_DanceActionsCallbackInterfaces.Add(instance);
-            @DanceW.started += instance.OnDanceW;
-            @DanceW.performed += instance.OnDanceW;
-            @DanceW.canceled += instance.OnDanceW;
-            @DanceA.started += instance.OnDanceA;
-            @DanceA.performed += instance.OnDanceA;
-            @DanceA.canceled += instance.OnDanceA;
-            @DanceS.started += instance.OnDanceS;
-            @DanceS.performed += instance.OnDanceS;
-            @DanceS.canceled += instance.OnDanceS;
-            @DanceD.started += instance.OnDanceD;
-            @DanceD.performed += instance.OnDanceD;
-            @DanceD.canceled += instance.OnDanceD;
+            if (instance == null || m_Wrapper.m_GameplayActionsCallbackInterfaces.Contains(instance)) return;
+            m_Wrapper.m_GameplayActionsCallbackInterfaces.Add(instance);
+            @MoveUp.started += instance.OnMoveUp;
+            @MoveUp.performed += instance.OnMoveUp;
+            @MoveUp.canceled += instance.OnMoveUp;
+            @MoveLeft.started += instance.OnMoveLeft;
+            @MoveLeft.performed += instance.OnMoveLeft;
+            @MoveLeft.canceled += instance.OnMoveLeft;
+            @MoveDown.started += instance.OnMoveDown;
+            @MoveDown.performed += instance.OnMoveDown;
+            @MoveDown.canceled += instance.OnMoveDown;
+            @MoveRight.started += instance.OnMoveRight;
+            @MoveRight.performed += instance.OnMoveRight;
+            @MoveRight.canceled += instance.OnMoveRight;
+            @Interact.started += instance.OnInteract;
+            @Interact.performed += instance.OnInteract;
+            @Interact.canceled += instance.OnInteract;
         }
 
         /// <summary>
@@ -342,30 +371,33 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <remarks>
         /// Calling this method when <paramref name="instance" /> have not previously been registered has no side-effects.
         /// </remarks>
-        /// <seealso cref="DanceActions" />
-        private void UnregisterCallbacks(IDanceActions instance)
+        /// <seealso cref="GameplayActions" />
+        private void UnregisterCallbacks(IGameplayActions instance)
         {
-            @DanceW.started -= instance.OnDanceW;
-            @DanceW.performed -= instance.OnDanceW;
-            @DanceW.canceled -= instance.OnDanceW;
-            @DanceA.started -= instance.OnDanceA;
-            @DanceA.performed -= instance.OnDanceA;
-            @DanceA.canceled -= instance.OnDanceA;
-            @DanceS.started -= instance.OnDanceS;
-            @DanceS.performed -= instance.OnDanceS;
-            @DanceS.canceled -= instance.OnDanceS;
-            @DanceD.started -= instance.OnDanceD;
-            @DanceD.performed -= instance.OnDanceD;
-            @DanceD.canceled -= instance.OnDanceD;
+            @MoveUp.started -= instance.OnMoveUp;
+            @MoveUp.performed -= instance.OnMoveUp;
+            @MoveUp.canceled -= instance.OnMoveUp;
+            @MoveLeft.started -= instance.OnMoveLeft;
+            @MoveLeft.performed -= instance.OnMoveLeft;
+            @MoveLeft.canceled -= instance.OnMoveLeft;
+            @MoveDown.started -= instance.OnMoveDown;
+            @MoveDown.performed -= instance.OnMoveDown;
+            @MoveDown.canceled -= instance.OnMoveDown;
+            @MoveRight.started -= instance.OnMoveRight;
+            @MoveRight.performed -= instance.OnMoveRight;
+            @MoveRight.canceled -= instance.OnMoveRight;
+            @Interact.started -= instance.OnInteract;
+            @Interact.performed -= instance.OnInteract;
+            @Interact.canceled -= instance.OnInteract;
         }
 
         /// <summary>
-        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="DanceActions.UnregisterCallbacks(IDanceActions)" />.
+        /// Unregisters <param cref="instance" /> and unregisters all input action callbacks via <see cref="GameplayActions.UnregisterCallbacks(IGameplayActions)" />.
         /// </summary>
-        /// <seealso cref="DanceActions.UnregisterCallbacks(IDanceActions)" />
-        public void RemoveCallbacks(IDanceActions instance)
+        /// <seealso cref="GameplayActions.UnregisterCallbacks(IGameplayActions)" />
+        public void RemoveCallbacks(IGameplayActions instance)
         {
-            if (m_Wrapper.m_DanceActionsCallbackInterfaces.Remove(instance))
+            if (m_Wrapper.m_GameplayActionsCallbackInterfaces.Remove(instance))
                 UnregisterCallbacks(instance);
         }
 
@@ -375,55 +407,62 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <remarks>
         /// If <paramref name="instance" /> is <c>null</c>, calling this method will only unregister all existing callbacks but not register any new callbacks.
         /// </remarks>
-        /// <seealso cref="DanceActions.AddCallbacks(IDanceActions)" />
-        /// <seealso cref="DanceActions.RemoveCallbacks(IDanceActions)" />
-        /// <seealso cref="DanceActions.UnregisterCallbacks(IDanceActions)" />
-        public void SetCallbacks(IDanceActions instance)
+        /// <seealso cref="GameplayActions.AddCallbacks(IGameplayActions)" />
+        /// <seealso cref="GameplayActions.RemoveCallbacks(IGameplayActions)" />
+        /// <seealso cref="GameplayActions.UnregisterCallbacks(IGameplayActions)" />
+        public void SetCallbacks(IGameplayActions instance)
         {
-            foreach (var item in m_Wrapper.m_DanceActionsCallbackInterfaces)
+            foreach (var item in m_Wrapper.m_GameplayActionsCallbackInterfaces)
                 UnregisterCallbacks(item);
-            m_Wrapper.m_DanceActionsCallbackInterfaces.Clear();
+            m_Wrapper.m_GameplayActionsCallbackInterfaces.Clear();
             AddCallbacks(instance);
         }
     }
     /// <summary>
-    /// Provides a new <see cref="DanceActions" /> instance referencing this action map.
+    /// Provides a new <see cref="GameplayActions" /> instance referencing this action map.
     /// </summary>
-    public DanceActions @Dance => new DanceActions(this);
+    public GameplayActions @Gameplay => new GameplayActions(this);
     /// <summary>
-    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Dance" which allows adding and removing callbacks.
+    /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Gameplay" which allows adding and removing callbacks.
     /// </summary>
-    /// <seealso cref="DanceActions.AddCallbacks(IDanceActions)" />
-    /// <seealso cref="DanceActions.RemoveCallbacks(IDanceActions)" />
-    public interface IDanceActions
+    /// <seealso cref="GameplayActions.AddCallbacks(IGameplayActions)" />
+    /// <seealso cref="GameplayActions.RemoveCallbacks(IGameplayActions)" />
+    public interface IGameplayActions
     {
         /// <summary>
-        /// Method invoked when associated input action "DanceW" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "MoveUp" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnDanceW(InputAction.CallbackContext context);
+        void OnMoveUp(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "DanceA" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "MoveLeft" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnDanceA(InputAction.CallbackContext context);
+        void OnMoveLeft(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "DanceS" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "MoveDown" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnDanceS(InputAction.CallbackContext context);
+        void OnMoveDown(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "DanceD" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "MoveRight" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnDanceD(InputAction.CallbackContext context);
+        void OnMoveRight(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Interact" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnInteract(InputAction.CallbackContext context);
     }
 }
