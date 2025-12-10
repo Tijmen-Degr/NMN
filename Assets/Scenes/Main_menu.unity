@@ -473,7 +473,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6043a3cc18b85346ac21f48dd181d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuParallax
-  offsetMultiplier: 1
+  offsetMultiplier: 20
   smoothTime: 0.3
 --- !u!1 &762112449
 GameObject:
@@ -618,7 +618,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -38}
+  m_AnchoredPosition: {x: 0, y: -71}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &855056570
@@ -668,7 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6043a3cc18b85346ac21f48dd181d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuParallax
-  offsetMultiplier: 0.7
+  offsetMultiplier: 10
   smoothTime: 0.3
 --- !u!1 &1258866294
 GameObject:
@@ -755,7 +755,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6043a3cc18b85346ac21f48dd181d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuParallax
-  offsetMultiplier: 0.1
+  offsetMultiplier: -10
   smoothTime: 0.3
 --- !u!1 &1265132116
 GameObject:
@@ -1011,7 +1011,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
+  m_AnchoredPosition: {x: 0, y: -38}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1526143041
@@ -1034,7 +1034,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 8e65549aacc4585479153269a7e3cff3, type: 3}
+  m_Texture: {fileID: 2800000, guid: 1d6ffdebdb9df43449a09dcb304185fe, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -1061,7 +1061,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6043a3cc18b85346ac21f48dd181d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuParallax
-  offsetMultiplier: 0.4
+  offsetMultiplier: 0
   smoothTime: 0.3
 --- !u!1 &1724502085
 GameObject:
@@ -1098,8 +1098,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 141}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -30, y: 126}
+  m_SizeDelta: {x: 107.1224, y: 46.2096}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1724502087
 MonoBehaviour:
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6043a3cc18b85346ac21f48dd181d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuParallax
-  offsetMultiplier: -0.2
+  offsetMultiplier: -15
   smoothTime: 0.3
 --- !u!1 &1831915204
 GameObject:
@@ -1185,8 +1185,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000030517578}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 4}
+  m_SizeDelta: {x: 107.4065, y: 84}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1831915206
 MonoBehaviour:
@@ -1235,7 +1235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6043a3cc18b85346ac21f48dd181d70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MenuParallax
-  offsetMultiplier: -0.5
+  offsetMultiplier: -2
   smoothTime: 0.3
 --- !u!1 &2048935813
 GameObject:
