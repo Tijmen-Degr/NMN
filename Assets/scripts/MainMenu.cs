@@ -1,18 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
-    public void Play()
+    public void LoadScene(string sceneName)
     {
-        LevelManager.Instance.LoadScene("ClubScene_UI","CrossFade");
+        SceneManager.LoadScene(sceneName);
     }
 
     public void Settings()
     {
-        LevelManager.Instance.LoadScene("Game", "CrossFade");
+        
     }
 
     public void Quit()
