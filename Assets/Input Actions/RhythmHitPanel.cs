@@ -11,8 +11,8 @@ public class RhythmHitPanel : MonoBehaviour
     public TMP_Text feedbackText;
 
     [Header("Timing")]
-    public float panelVisibleTime = 0.15f; // slightly longer for leniency
-    public float perfectWindow = 1.5f;     // more lenient ±0.2s
+    public float panelVisibleTime = 0.15f;
+    public float perfectWindow = 0.35f;
 
     private float beatTime; // time when the panel appeared
     private bool awaitingInput = false;

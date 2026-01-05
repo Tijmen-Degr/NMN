@@ -23,16 +23,16 @@ public class FMODBeatListener : MonoBehaviour
 
     void Start()
     {
-        musicInstance = RuntimeManager.CreateInstance(musicEvent);
+        // Get the music instance created by the controller
+        musicInstance = FMODMusicController.Instance.GetMusicInstance();
 
         beatCallback = new FMOD.Studio.EVENT_CALLBACK(BeatEventCallback);
         musicInstance.setCallback(
             beatCallback,
             EVENT_CALLBACK_TYPE.TIMELINE_BEAT
         );
-
-        musicInstance.start();
     }
+
 
     void Update()
     {
