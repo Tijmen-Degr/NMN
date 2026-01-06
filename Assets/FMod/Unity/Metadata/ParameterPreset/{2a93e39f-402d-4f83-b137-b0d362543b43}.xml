@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.03.00">
+	<object class="ParameterPreset" id="{2a93e39f-402d-4f83-b137-b0d362543b43}">
+		<property name="name">
+			<value>Correction</value>
+		</property>
+		<relationship name="folder">
+			<destination>{d9f7a3f9-2fd5-44f0-a1ae-c0172d4d7744}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{27dbd2a2-3342-48a8-9d9c-f93a57b03451}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{27dbd2a2-3342-48a8-9d9c-f93a57b03451}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>2</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Correct</value>
+			<value>Incorrect</value>
+		</property>
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+	</object>
+</objects>
