@@ -328,50 +328,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 71534949}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &196993990
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 196993992}
-  - component: {fileID: 196993991}
-  m_Layer: 0
-  m_Name: Minigame1Gate
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &196993991
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196993990}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4752ef9fdb89a9841b96c7fefab26bc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Minigame1Gate
---- !u!4 &196993992
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196993990}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &204221756 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e85654c454a7df438d754df28e9f68b, type: 3}
@@ -695,70 +651,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 223011276}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &333123922
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 333123925}
-  - component: {fileID: 333123924}
-  - component: {fileID: 333123923}
-  m_Layer: 0
-  m_Name: MusicController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &333123923
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333123922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6f5f76413da4a534295733bc3b3386ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FMODMarkerListener
---- !u!114 &333123924
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333123922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3ff139077717f6c4eacc7d08a7df746b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FMODMusicController
-  musicEvent:
-    Guid:
-      Data1: -1095623248
-      Data2: 1238303729
-      Data3: -1025800296
-      Data4: -1022595672
-    Path: event:/Test1
---- !u!4 &333123925
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 333123922}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &341737283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1002,7 +894,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &355408047
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2219,8 +2111,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   message: Press E to interact
   areaID: 1
-  minigameCameraPosition: {fileID: 0}
-  rhythmMinigame: {fileID: 0}
 --- !u!135 &529654862
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2464,57 +2354,6 @@ Transform:
   - {fileID: 1989269929}
   - {fileID: 1916226146}
   - {fileID: 1063584397}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &622100936
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 622100938}
-  - component: {fileID: 622100937}
-  m_Layer: 0
-  m_Name: MusicManagerBeatListener
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &622100937
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622100936}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 21a93cdf6dfdfd842838a58232c8958d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FMODBeatListener
-  musicEvent:
-    Guid:
-      Data1: -1095623248
-      Data2: 1238303729
-      Data3: -1025800296
-      Data4: -1022595672
-    Path: event:/Test1
---- !u!4 &622100938
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 622100936}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &638604028
@@ -5137,55 +4976,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1143107037}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1195580750
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1195580752}
-  - component: {fileID: 1195580751}
-  m_Layer: 0
-  m_Name: RhythmInputManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1195580751
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195580750}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe0c618fa51432f4bb8b095437b8ebfb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RhythmHitPanel
-  beatPanel: {fileID: 1748980397}
-  feedbackPanel: {fileID: 355408046}
-  feedbackText: {fileID: 1817754432}
-  panelVisibleTime: 0.1
-  perfectWindow: 0.35
---- !u!4 &1195580752
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1195580750}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1197222500
 GameObject:
   m_ObjectHideFlags: 0
@@ -5299,52 +5089,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197222500}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1208878363
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1208878365}
-  - component: {fileID: 1208878364}
-  m_Layer: 0
-  m_Name: BeatUI
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1208878364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208878363}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd91dba15803bdd43ab5534d66d0fe78, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::BeatPanelPopup
-  panel: {fileID: 1748980397}
-  visibleTime: 0.1
---- !u!4 &1208878365
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1208878363}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1216286640
 GameObject:
   m_ObjectHideFlags: 0
@@ -5605,8 +5349,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   message: Press E to interact
   areaID: 3
-  minigameCameraPosition: {fileID: 0}
-  rhythmMinigame: {fileID: 0}
 --- !u!135 &1232187923
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5877,8 +5619,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Interactable
   message: Press E to interact
   areaID: 2
-  minigameCameraPosition: {fileID: 0}
-  rhythmMinigame: {fileID: 0}
 --- !u!135 &1320197603
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9879,17 +9619,12 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1056112575}
-  - {fileID: 333123925}
   - {fileID: 1232187926}
-  - {fileID: 196993992}
-  - {fileID: 622100938}
   - {fileID: 71288022}
-  - {fileID: 1195580752}
   - {fileID: 1786847039}
   - {fileID: 1320197606}
   - {fileID: 1655301868}
   - {fileID: 495852166}
-  - {fileID: 1208878365}
   - {fileID: 529654865}
   - {fileID: 619222376}
   - {fileID: 1092739621}
