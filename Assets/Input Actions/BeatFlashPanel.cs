@@ -14,12 +14,16 @@ public class BeatFlashPanel : MonoBehaviour
     public float flashDuration = 0.1f;
 
     private EventInstance musicInstance;
-    private volatile bool beatThisFrame = false;
-    private bool isRunning = false;
 
+    // Flag set from FMOD audio thread
+    private volatile bool beatTriggered = false;
+
+    private bool isRunning = false;
     private float flashTimer = 0f;
 
-    // Call from GameStartManager
+    // IMPORTANT: keep delegate alive
+    private EVENT_CALLBACK beatCallback;
+
     public void StartBeatSystem()
     {
         if (isRunning) return;
@@ -28,42 +32,30 @@ public class BeatFlashPanel : MonoBehaviour
         if (panel != null)
             panel.SetActive(false);
 
-        // Create only one instance
         if (!musicInstance.isValid())
             musicInstance = RuntimeManager.CreateInstance(musicEvent);
 
-        // Set FMOD callback for tempo marker beats
-        musicInstance.setCallback((type, instance, ptr) =>
-        {
-            if (type == EVENT_CALLBACK_TYPE.TIMELINE_BEAT)
-            {
-                beatThisFrame = true;
-            }
-            return FMOD.RESULT.OK;
-        }, EVENT_CALLBACK_TYPE.TIMELINE_BEAT);
+        // Assign named callback
+        beatCallback = OnFmodEventCallback;
+        musicInstance.setCallback(beatCallback, EVENT_CALLBACK_TYPE.TIMELINE_BEAT);
 
-        // Start music
         musicInstance.start();
     }
 
     private void Update()
     {
-        // Trigger panel flash when a beat happens
-        if (beatThisFrame)
+        if (beatTriggered)
         {
-            beatThisFrame = false;
+            beatTriggered = false;
             panel.SetActive(true);
             flashTimer = flashDuration;
         }
 
-        // Turn off panel after flashDuration
         if (flashTimer > 0f)
         {
             flashTimer -= Time.deltaTime;
             if (flashTimer <= 0f && panel.activeSelf)
-            {
                 panel.SetActive(false);
-            }
         }
     }
 
@@ -72,7 +64,24 @@ public class BeatFlashPanel : MonoBehaviour
         if (musicInstance.isValid())
         {
             musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
-            musicInstance.release(); // Release memory safely
+            musicInstance.release();
         }
+    }
+
+    // ==================================
+    // FMOD CALLBACK (AUDIO THREAD)
+    // ==================================
+    private FMOD.RESULT OnFmodEventCallback(
+        EVENT_CALLBACK_TYPE type,
+        IntPtr eventInstance,
+        IntPtr parameters)
+    {
+        if (type == EVENT_CALLBACK_TYPE.TIMELINE_BEAT)
+        {
+            // DO NOT call Unity here
+            beatTriggered = true;
+        }
+
+        return FMOD.RESULT.OK;
     }
 }
