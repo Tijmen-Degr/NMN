@@ -21,9 +21,10 @@ public class BeatFlashPanel : MonoBehaviour
     private bool isRunning = false;
     private float flashTimer = 0f;
 
-    // IMPORTANT: keep delegate alive
+    // IMPORTANT: Keep callback delegate alive to prevent GC crash
     private EVENT_CALLBACK beatCallback;
 
+    // Called by GameStartManager
     public void StartBeatSystem()
     {
         if (isRunning) return;
@@ -61,24 +62,32 @@ public class BeatFlashPanel : MonoBehaviour
 
     private void OnDestroy()
     {
+        isRunning = false;
+
         if (musicInstance.isValid())
         {
+            // VERY IMPORTANT: Remove callback before stopping FMOD
+            musicInstance.setCallback(null);
+
             musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             musicInstance.release();
         }
     }
 
-    // ==================================
-    // FMOD CALLBACK (AUDIO THREAD)
-    // ==================================
+    // ======================================
+    // FMOD CALLBACK (RUNS ON AUDIO THREAD)
+    // ======================================
     private FMOD.RESULT OnFmodEventCallback(
         EVENT_CALLBACK_TYPE type,
         IntPtr eventInstance,
         IntPtr parameters)
     {
+        if (!isRunning)
+            return FMOD.RESULT.OK;
+
         if (type == EVENT_CALLBACK_TYPE.TIMELINE_BEAT)
         {
-            // DO NOT call Unity here
+            // Do NOT touch Unity objects here
             beatTriggered = true;
         }
 
