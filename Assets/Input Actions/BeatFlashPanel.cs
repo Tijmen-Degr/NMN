@@ -3,40 +3,71 @@ using FMODUnity;
 using FMOD.Studio;
 using System;
 using System.Runtime.InteropServices;
+using TMPro;
+using UnityEngine.InputSystem;
 
 public class BeatFlashPanel : MonoBehaviour
 {
     [Header("FMOD")]
     public EventReference musicEvent;
 
-    [Header("UI")]
-    public GameObject panel;
-    public float flashDuration = 0.1f;
+    [Header("Beat Flash")]
+    public GameObject beatPanel;
+    public float flashDuration = 0.12f;
+
+    [Header("Hit UI")]
+    public GameObject resultPanel;
+    public TMP_Text resultText;
+    public float resultDisplayTime = 0.5f;
 
     private EventInstance musicInstance;
-
-    // Flag set from FMOD audio thread
-    private volatile bool beatTriggered = false;
-
     private bool isRunning = false;
-    private float flashTimer = 0f;
 
-    // IMPORTANT: Keep callback delegate alive to prevent GC crash
+    private float flashTimer;
+    private float resultTimer;
+
+    private PlayerControls controls;
     private EVENT_CALLBACK beatCallback;
 
-    // Called by GameStartManager
+    private volatile bool beatTriggered = false;
+    private bool beatWindowOpen = false;
+
+    [StructLayout(LayoutKind.Sequential)]
+    struct TimelineBeatProperties
+    {
+        public int bar;
+        public int beat;
+        public float tempo;
+        public int position;
+    }
+
+    private void Awake()
+    {
+        controls = new PlayerControls();
+    }
+
+    private void OnEnable()
+    {
+        controls.Enable();
+        controls.Gameplay.Mouse1.performed += OnHit;
+    }
+
+    private void OnDisable()
+    {
+        controls.Gameplay.Mouse1.performed -= OnHit;
+        controls.Disable();
+    }
+
     public void StartBeatSystem()
     {
         if (isRunning) return;
         isRunning = true;
 
-        if (panel != null)
-            panel.SetActive(false);
+        beatPanel.SetActive(false);
+        resultPanel.SetActive(false);
 
-        if (!musicInstance.isValid())
-            musicInstance = RuntimeManager.CreateInstance(musicEvent);
+        musicInstance = RuntimeManager.CreateInstance(musicEvent);
 
-        // Assign named callback
         beatCallback = OnFmodEventCallback;
         musicInstance.setCallback(beatCallback, EVENT_CALLBACK_TYPE.TIMELINE_BEAT);
 
@@ -48,16 +79,44 @@ public class BeatFlashPanel : MonoBehaviour
         if (beatTriggered)
         {
             beatTriggered = false;
-            panel.SetActive(true);
+
+            beatPanel.SetActive(true);
+            beatWindowOpen = true;
             flashTimer = flashDuration;
         }
 
         if (flashTimer > 0f)
         {
             flashTimer -= Time.deltaTime;
-            if (flashTimer <= 0f && panel.activeSelf)
-                panel.SetActive(false);
+            if (flashTimer <= 0f)
+            {
+                beatPanel.SetActive(false);
+                beatWindowOpen = false;
+            }
         }
+
+        if (resultTimer > 0f)
+        {
+            resultTimer -= Time.deltaTime;
+            if (resultTimer <= 0f)
+                resultPanel.SetActive(false);
+        }
+    }
+
+    private void OnHit(InputAction.CallbackContext ctx)
+    {
+        if (beatWindowOpen)
+            ShowResult("CORRECT", Color.green);
+        else
+            ShowResult("MISS", Color.red);
+    }
+
+    private void ShowResult(string text, Color color)
+    {
+        resultPanel.SetActive(true);
+        resultText.text = text;
+        resultText.color = color;
+        resultTimer = resultDisplayTime;
     }
 
     private void OnDestroy()
@@ -66,17 +125,15 @@ public class BeatFlashPanel : MonoBehaviour
 
         if (musicInstance.isValid())
         {
-            // VERY IMPORTANT: Remove callback before stopping FMOD
             musicInstance.setCallback(null);
-
             musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             musicInstance.release();
         }
     }
 
-    // ======================================
-    // FMOD CALLBACK (RUNS ON AUDIO THREAD)
-    // ======================================
+    // ============================
+    // FMOD AUDIO THREAD
+    // ============================
     private FMOD.RESULT OnFmodEventCallback(
         EVENT_CALLBACK_TYPE type,
         IntPtr eventInstance,
@@ -87,7 +144,6 @@ public class BeatFlashPanel : MonoBehaviour
 
         if (type == EVENT_CALLBACK_TYPE.TIMELINE_BEAT)
         {
-            // Do NOT touch Unity objects here
             beatTriggered = true;
         }
 
