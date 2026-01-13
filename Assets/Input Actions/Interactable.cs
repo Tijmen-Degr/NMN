@@ -3,40 +3,46 @@ using UnityEngine;
 [RequireComponent(typeof(Collider))]
 public class Interactable : MonoBehaviour
 {
+    [Header("UI")]
     [TextArea]
     public string message = "Press E to interact";
 
-    public int areaID = 1; // Unique number for each area
+    [Header("Area Settings")]
+    public int areaID = 1;
 
     private InteractablesManager manager;
 
     private void Awake()
     {
-        manager = FindObjectOfType<InteractablesManager>();
+        manager = FindFirstObjectByType<InteractablesManager>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && manager != null)
-        {
+        if (!other.CompareTag("Player"))
+            return;
+
+        if (manager != null)
             manager.EnterInteractable(this);
-        }
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.CompareTag("Player") && manager != null)
-        {
+        if (!other.CompareTag("Player"))
+            return;
+
+        if (manager != null)
             manager.ExitInteractable(this);
-        }
     }
 
-    // Called when player presses E while in this area
+    // Called when player presses Interact
     public virtual void OnInteract()
     {
         if (manager != null)
         {
-            manager.UpdateText("Area " + areaID + " here!");
+            manager.UpdateText(message);
         }
+
+        Debug.Log($"[Interactable] Interacted with Area {areaID}");
     }
 }
