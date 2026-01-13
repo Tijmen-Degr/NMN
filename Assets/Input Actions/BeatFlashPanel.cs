@@ -13,7 +13,12 @@ public class BeatFlashPanel : MonoBehaviour
 
     [Header("Beat Flash")]
     public GameObject beatPanel;
-    public float flashDuration = 0.12f;
+    public float flashDuration = 0.25f;
+    public float anticipationTime = 0.5f;
+
+    [Header("Direction Panels")]
+    public GameObject leftPanel;
+    public GameObject rightPanel;
 
     [Header("Hit UI")]
     public GameObject resultPanel;
@@ -25,12 +30,19 @@ public class BeatFlashPanel : MonoBehaviour
 
     private float flashTimer;
     private float resultTimer;
+    private float scheduledFlashTimer = -1f;
 
     private PlayerControls controls;
     private EVENT_CALLBACK beatCallback;
 
-    private volatile bool beatTriggered = false;
     private bool beatWindowOpen = false;
+    private bool inputReceivedThisBeat = false;
+
+    private volatile bool beatQueued = false;
+    private volatile int queuedBeatNumber = 0;
+
+    private enum BeatInput { Left, Right }
+    private BeatInput currentRequiredInput;
 
     [StructLayout(LayoutKind.Sequential)]
     struct TimelineBeatProperties
@@ -49,12 +61,14 @@ public class BeatFlashPanel : MonoBehaviour
     private void OnEnable()
     {
         controls.Enable();
-        controls.Gameplay.Mouse1.performed += OnHit;
+        controls.Gameplay.Mouse1.performed += ctx => OnHit(BeatInput.Left);
+        controls.Gameplay.Mouse2.performed += ctx => OnHit(BeatInput.Right);
     }
 
     private void OnDisable()
     {
-        controls.Gameplay.Mouse1.performed -= OnHit;
+        controls.Gameplay.Mouse1.performed -= ctx => OnHit(BeatInput.Left);
+        controls.Gameplay.Mouse2.performed -= ctx => OnHit(BeatInput.Right);
         controls.Disable();
     }
 
@@ -64,6 +78,8 @@ public class BeatFlashPanel : MonoBehaviour
         isRunning = true;
 
         beatPanel.SetActive(false);
+        leftPanel.SetActive(false);
+        rightPanel.SetActive(false);
         resultPanel.SetActive(false);
 
         musicInstance = RuntimeManager.CreateInstance(musicEvent);
@@ -76,13 +92,31 @@ public class BeatFlashPanel : MonoBehaviour
 
     private void Update()
     {
-        if (beatTriggered)
+        if (beatQueued)
         {
-            beatTriggered = false;
+            beatQueued = false;
 
-            beatPanel.SetActive(true);
-            beatWindowOpen = true;
-            flashTimer = flashDuration;
+            if (queuedBeatNumber == 1 || queuedBeatNumber == 3)
+            {
+                scheduledFlashTimer = anticipationTime;
+
+                currentRequiredInput = UnityEngine.Random.value < 0.5f ? BeatInput.Left : BeatInput.Right;
+
+                leftPanel.SetActive(currentRequiredInput == BeatInput.Left);
+                rightPanel.SetActive(currentRequiredInput == BeatInput.Right);
+            }
+        }
+
+        if (scheduledFlashTimer > 0f)
+        {
+            scheduledFlashTimer -= Time.deltaTime;
+            if (scheduledFlashTimer <= 0f)
+            {
+                beatPanel.SetActive(true);
+                beatWindowOpen = true;
+                inputReceivedThisBeat = false;
+                flashTimer = flashDuration;
+            }
         }
 
         if (flashTimer > 0f)
@@ -92,6 +126,12 @@ public class BeatFlashPanel : MonoBehaviour
             {
                 beatPanel.SetActive(false);
                 beatWindowOpen = false;
+                leftPanel.SetActive(false);
+                rightPanel.SetActive(false);
+
+                // No input = MISS
+                if (!inputReceivedThisBeat)
+                    ShowResult("MISS", Color.red);
             }
         }
 
@@ -103,12 +143,20 @@ public class BeatFlashPanel : MonoBehaviour
         }
     }
 
-    private void OnHit(InputAction.CallbackContext ctx)
+    private void OnHit(BeatInput input)
     {
-        if (beatWindowOpen)
+        if (!beatWindowOpen)
+        {
+            ShowResult("MISS", Color.red);
+            return;
+        }
+
+        inputReceivedThisBeat = true;
+
+        if (input == currentRequiredInput)
             ShowResult("CORRECT", Color.green);
         else
-            ShowResult("MISS", Color.red);
+            ShowResult("WRONG", Color.yellow);
     }
 
     private void ShowResult(string text, Color color)
@@ -144,7 +192,9 @@ public class BeatFlashPanel : MonoBehaviour
 
         if (type == EVENT_CALLBACK_TYPE.TIMELINE_BEAT)
         {
-            beatTriggered = true;
+            var beat = Marshal.PtrToStructure<TimelineBeatProperties>(parameters);
+            queuedBeatNumber = beat.beat;
+            beatQueued = true;
         }
 
         return FMOD.RESULT.OK;
