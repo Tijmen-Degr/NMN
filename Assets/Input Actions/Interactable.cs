@@ -10,38 +10,36 @@ public class Interactable : MonoBehaviour
     [Header("Area Settings")]
     public int areaID = 1;
 
+    [Header("Camera")]
+    public Transform cameraTarget;
+
     private InteractablesManager manager;
+    private CameraController cameraController;
 
     private void Awake()
     {
         manager = FindFirstObjectByType<InteractablesManager>();
+        cameraController = FindFirstObjectByType<CameraController>();
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!other.CompareTag("Player"))
-            return;
-
-        if (manager != null)
-            manager.EnterInteractable(this);
+        if (!other.CompareTag("Player")) return;
+        manager?.EnterInteractable(this);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        if (!other.CompareTag("Player"))
-            return;
-
-        if (manager != null)
-            manager.ExitInteractable(this);
+        if (!other.CompareTag("Player")) return;
+        manager?.ExitInteractable(this);
     }
 
-    // Called when player presses Interact
     public virtual void OnInteract()
     {
-        if (manager != null)
-        {
-            manager.UpdateText(message);
-        }
+        manager?.UpdateText(message);
+
+        if (cameraController != null && cameraTarget != null)
+            cameraController.MoveToArea(cameraTarget);
 
         Debug.Log($"[Interactable] Interacted with Area {areaID}");
     }
