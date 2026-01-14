@@ -61,6 +61,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Mouse2",
+                    "type": "Button",
+                    "id": "4d744daa-95e6-4585-94c5-731d143ebfd6",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "StartGameF",
                     "type": "Button",
                     "id": "090af1ed-6f85-4bc4-9d5c-8b3f4be9e34f",
@@ -145,6 +154,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "StartGameF",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "77734421-d241-4478-8393-31b010abb6fa",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Mouse2",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
