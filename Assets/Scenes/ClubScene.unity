@@ -372,6 +372,7 @@ GameObject:
   - component: {fileID: 12983328}
   - component: {fileID: 12983327}
   - component: {fileID: 12983326}
+  - component: {fileID: 12983329}
   m_Layer: 0
   m_Name: Cylinder (27)
   m_TagString: Untagged
@@ -388,7 +389,7 @@ Transform:
   m_GameObject: {fileID: 12983324}
   serializedVersion: 2
   m_LocalRotation: {x: -0.49999967, y: 0.86602557, z: 0.000000014901159, w: 0.0000000074505797}
-  m_LocalPosition: {x: 6.2357635, y: 5.4800005, z: 13.977492}
+  m_LocalPosition: {x: 6.2357635, y: 5.480065, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -473,6 +474,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12983324}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &12983329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12983324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!4 &15596900 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471669776683367166, guid: 8e1471e805192fd4e902f7cc7eec8378, type: 3}
@@ -1520,7 +1537,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 479236815}
+      addedObject: {fileID: 479236818}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &45620786 stripped
 Transform:
@@ -1539,6 +1556,7 @@ GameObject:
   - component: {fileID: 55031013}
   - component: {fileID: 55031012}
   - component: {fileID: 55031011}
+  - component: {fileID: 55031014}
   m_Layer: 0
   m_Name: Cylinder (29)
   m_TagString: Untagged
@@ -1555,7 +1573,7 @@ Transform:
   m_GameObject: {fileID: 55031009}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70710707, w: 0.70710653}
-  m_LocalPosition: {x: 4.6, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 4.6, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1640,6 +1658,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 55031009}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &55031014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 55031009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1001 &56654904
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1843,6 +1877,7 @@ GameObject:
   - component: {fileID: 62977425}
   - component: {fileID: 62977424}
   - component: {fileID: 62977423}
+  - component: {fileID: 62977426}
   m_Layer: 0
   m_Name: Cylinder (29)
   m_TagString: Untagged
@@ -1859,7 +1894,7 @@ Transform:
   m_GameObject: {fileID: 62977421}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70710707, w: 0.70710653}
-  m_LocalPosition: {x: 4.6, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 4.6, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1944,6 +1979,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 62977421}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &62977426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 62977421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &67547555
 GameObject:
   m_ObjectHideFlags: 0
@@ -2119,7 +2170,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 769415827}
+      addedObject: {fileID: 769415830}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &73972873 stripped
 Transform:
@@ -2442,6 +2493,7 @@ GameObject:
   - component: {fileID: 103637512}
   - component: {fileID: 103637511}
   - component: {fileID: 103637510}
+  - component: {fileID: 103637513}
   m_Layer: 0
   m_Name: Cylinder (27)
   m_TagString: Untagged
@@ -2458,7 +2510,7 @@ Transform:
   m_GameObject: {fileID: 103637508}
   serializedVersion: 2
   m_LocalRotation: {x: -0.49999967, y: 0.86602557, z: 0.000000014901159, w: 0.0000000074505797}
-  m_LocalPosition: {x: 6.2357635, y: 5.4800005, z: 13.977492}
+  m_LocalPosition: {x: 6.2357635, y: 5.480065, z: 34.36573}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2543,6 +2595,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103637508}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &103637513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 103637508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &105502671
 GameObject:
   m_ObjectHideFlags: 0
@@ -2972,6 +3040,7 @@ GameObject:
   - component: {fileID: 124943165}
   - component: {fileID: 124943164}
   - component: {fileID: 124943163}
+  - component: {fileID: 124943166}
   m_Layer: 0
   m_Name: Cylinder (19)
   m_TagString: Untagged
@@ -2988,7 +3057,7 @@ Transform:
   m_GameObject: {fileID: 124943161}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.13052596, w: 0.99144495}
-  m_LocalPosition: {x: -0.45999908, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: -0.45999908, y: 5.48, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3073,6 +3142,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 124943161}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &124943166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124943161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &127570589
 GameObject:
   m_ObjectHideFlags: 0
@@ -3929,6 +4014,7 @@ GameObject:
   - component: {fileID: 143296724}
   - component: {fileID: 143296723}
   - component: {fileID: 143296722}
+  - component: {fileID: 143296725}
   m_Layer: 0
   m_Name: Cylinder (19)
   m_TagString: Untagged
@@ -3945,7 +4031,7 @@ Transform:
   m_GameObject: {fileID: 143296720}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.13052596, w: 0.99144495}
-  m_LocalPosition: {x: -0.45999908, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: -0.45999908, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4030,6 +4116,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 143296720}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &143296725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143296720}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &146760809
 GameObject:
   m_ObjectHideFlags: 0
@@ -4155,6 +4257,7 @@ GameObject:
   - component: {fileID: 147092732}
   - component: {fileID: 147092731}
   - component: {fileID: 147092730}
+  - component: {fileID: 147092733}
   m_Layer: 0
   m_Name: Cylinder (21)
   m_TagString: Untagged
@@ -4171,7 +4274,7 @@ Transform:
   m_GameObject: {fileID: 147092728}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.2588186, w: 0.965926}
-  m_LocalPosition: {x: 0.7099991, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 0.7099991, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4256,6 +4359,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 147092728}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &147092733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147092728}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &147952060
 GameObject:
   m_ObjectHideFlags: 0
@@ -5154,7 +5273,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 249403070}
+      addedObject: {fileID: 249403073}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &165163577 stripped
 Transform:
@@ -6429,6 +6548,7 @@ GameObject:
   - component: {fileID: 219342043}
   - component: {fileID: 219342042}
   - component: {fileID: 219342041}
+  - component: {fileID: 219342044}
   m_Layer: 0
   m_Name: Cylinder (27)
   m_TagString: Untagged
@@ -6445,7 +6565,7 @@ Transform:
   m_GameObject: {fileID: 219342039}
   serializedVersion: 2
   m_LocalRotation: {x: -0.49999967, y: 0.86602557, z: 0.000000014901159, w: 0.0000000074505797}
-  m_LocalPosition: {x: 6.2357635, y: 5.4800005, z: 13.977492}
+  m_LocalPosition: {x: 6.2357635, y: 5.480065, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6530,6 +6650,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 219342039}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &219342044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219342039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &223615511
 GameObject:
   m_ObjectHideFlags: 0
@@ -6784,6 +6920,7 @@ GameObject:
   - component: {fileID: 236712367}
   - component: {fileID: 236712366}
   - component: {fileID: 236712365}
+  - component: {fileID: 236712368}
   m_Layer: 0
   m_Name: Cylinder (23)
   m_TagString: Untagged
@@ -6800,7 +6937,7 @@ Transform:
   m_GameObject: {fileID: 236712363}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.4999996, w: 0.8660257}
-  m_LocalPosition: {x: 3.0699997, y: 5.4800005, z: 13.97749}
+  m_LocalPosition: {x: 3.0699997, y: 5.480065, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6885,6 +7022,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 236712363}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &236712368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 236712363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &241695649
 GameObject:
   m_ObjectHideFlags: 0
@@ -7271,7 +7424,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 165163576}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &249403070
+--- !u!114 &249403073
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7280,11 +7433,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 249403067}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &252248744
 GameObject:
   m_ObjectHideFlags: 0
@@ -7297,6 +7452,7 @@ GameObject:
   - component: {fileID: 252248748}
   - component: {fileID: 252248747}
   - component: {fileID: 252248746}
+  - component: {fileID: 252248749}
   m_Layer: 0
   m_Name: Cylinder (26)
   m_TagString: Untagged
@@ -7313,7 +7469,7 @@ Transform:
   m_GameObject: {fileID: 252248744}
   serializedVersion: 2
   m_LocalRotation: {x: -0.38268322, y: 0.9238797, z: 0.000000044703484, w: -0.000000037252903}
-  m_LocalPosition: {x: 7.425765, y: 5.48, z: 13.977491}
+  m_LocalPosition: {x: 7.425765, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -7398,6 +7554,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 252248744}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &252248749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 252248744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &253758712
 GameObject:
   m_ObjectHideFlags: 0
@@ -8749,6 +8921,7 @@ GameObject:
   - component: {fileID: 304394177}
   - component: {fileID: 304394176}
   - component: {fileID: 304394175}
+  - component: {fileID: 304394178}
   m_Layer: 0
   m_Name: Cylinder (28)
   m_TagString: Untagged
@@ -8765,7 +8938,7 @@ Transform:
   m_GameObject: {fileID: 304394173}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000000014901159}
-  m_LocalPosition: {x: 10.990805, y: 5.48, z: 13.977486}
+  m_LocalPosition: {x: 10.990805, y: 5.4800644, z: 34.365723}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8850,6 +9023,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 304394173}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &304394178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304394173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!4 &309798008 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d677d0ec3933f2d4b9c76070305c8b67, type: 3}
@@ -11686,6 +11875,7 @@ GameObject:
   - component: {fileID: 366082632}
   - component: {fileID: 366082631}
   - component: {fileID: 366082630}
+  - component: {fileID: 366082633}
   m_Layer: 0
   m_Name: Cylinder (29)
   m_TagString: Untagged
@@ -11702,7 +11892,7 @@ Transform:
   m_GameObject: {fileID: 366082628}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70710707, w: 0.70710653}
-  m_LocalPosition: {x: 4.6, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 4.6, y: 5.48, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -11787,6 +11977,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 366082628}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &366082633
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366082628}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &366765883
 GameObject:
   m_ObjectHideFlags: 0
@@ -12910,6 +13116,7 @@ GameObject:
   - component: {fileID: 413069068}
   - component: {fileID: 413069067}
   - component: {fileID: 413069066}
+  - component: {fileID: 413069069}
   m_Layer: 0
   m_Name: Cylinder (24)
   m_TagString: Untagged
@@ -12926,7 +13133,7 @@ Transform:
   m_GameObject: {fileID: 413069064}
   serializedVersion: 2
   m_LocalRotation: {x: -0.13052602, y: 0.9914449, z: -0.000000013038514, w: 0.000000059604638}
-  m_LocalPosition: {x: 9.765762, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 9.765762, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13011,6 +13218,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 413069064}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &413069069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 413069064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &415175023
 GameObject:
   m_ObjectHideFlags: 0
@@ -13725,6 +13948,7 @@ GameObject:
   - component: {fileID: 434753371}
   - component: {fileID: 434753370}
   - component: {fileID: 434753369}
+  - component: {fileID: 434753372}
   m_Layer: 0
   m_Name: Cylinder (24)
   m_TagString: Untagged
@@ -13741,7 +13965,7 @@ Transform:
   m_GameObject: {fileID: 434753367}
   serializedVersion: 2
   m_LocalRotation: {x: -0.13052602, y: 0.9914449, z: -0.000000013038514, w: 0.000000059604638}
-  m_LocalPosition: {x: 9.765762, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 9.765762, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -13826,6 +14050,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 434753367}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &434753372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434753367}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1001 &437065690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13907,7 +14147,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 438053317}
-  - component: {fileID: 438053318}
   m_Layer: 0
   m_Name: HexagonLamp (2)
   m_TagString: Untagged
@@ -13924,7 +14163,7 @@ Transform:
   m_GameObject: {fileID: 438053316}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7662648, w: 0.64252496}
-  m_LocalPosition: {x: 91, y: 6, z: -32.66}
+  m_LocalPosition: {x: 87.149994, y: 6, z: -32.67}
   m_LocalScale: {x: 0.46377, y: 0.46377, z: 0.46377}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13939,20 +14178,6 @@ Transform:
   - {fileID: 2091237843}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 100.039}
---- !u!114 &438053318
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 438053316}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
-  intensity: 2
 --- !u!1 &438594156
 GameObject:
   m_ObjectHideFlags: 0
@@ -14548,7 +14773,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1793208852}
+      addedObject: {fileID: 1793208855}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &454949006 stripped
 Transform:
@@ -14803,14 +15028,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 471855322}
+      addedObject: {fileID: 471855325}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &471855319 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 471855318}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &471855322
+--- !u!114 &471855325
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14819,17 +15044,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 215657131}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &479236812 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 45620785}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &479236815
+--- !u!114 &479236818
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14838,11 +15065,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 479236812}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &483490945
 GameObject:
   m_ObjectHideFlags: 0
@@ -15671,7 +15900,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 774980603}
+      addedObject: {fileID: 774980606}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &505347394 stripped
 Transform:
@@ -16077,7 +16306,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1298495337}
+      addedObject: {fileID: 1298495340}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &510865095 stripped
 Transform:
@@ -16146,14 +16375,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 513652660}
+      addedObject: {fileID: 513652663}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &513652657 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 513652656}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &513652660
+--- !u!114 &513652663
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16162,11 +16391,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 131028997}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &514457281
 GameObject:
   m_ObjectHideFlags: 0
@@ -16476,6 +16707,7 @@ GameObject:
   - component: {fileID: 525758648}
   - component: {fileID: 525758647}
   - component: {fileID: 525758646}
+  - component: {fileID: 525758649}
   m_Layer: 0
   m_Name: Cylinder (28)
   m_TagString: Untagged
@@ -16492,7 +16724,7 @@ Transform:
   m_GameObject: {fileID: 525758644}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000000014901159}
-  m_LocalPosition: {x: 10.990805, y: 5.48, z: 13.977486}
+  m_LocalPosition: {x: 10.990805, y: 5.4800644, z: 34.365723}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -16577,6 +16809,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525758644}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &525758649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 525758644}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &529948552
 GameObject:
   m_ObjectHideFlags: 0
@@ -17084,7 +17332,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1693937978}
+      addedObject: {fileID: 1693937981}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &545522824 stripped
 Transform:
@@ -18001,14 +18249,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 570268078}
+      addedObject: {fileID: 570268081}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &570268075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 570268074}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &570268078
+--- !u!114 &570268081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18017,11 +18265,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 33970250}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &570505696
 GameObject:
   m_ObjectHideFlags: 0
@@ -18387,14 +18637,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 585211061}
+      addedObject: {fileID: 585211064}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &585211058 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 585211057}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &585211061
+--- !u!114 &585211064
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -18403,11 +18653,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 88311885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &591550538
 GameObject:
   m_ObjectHideFlags: 0
@@ -18703,6 +18955,7 @@ GameObject:
   - component: {fileID: 597317716}
   - component: {fileID: 597317715}
   - component: {fileID: 597317714}
+  - component: {fileID: 597317717}
   m_Layer: 0
   m_Name: Cylinder (21)
   m_TagString: Untagged
@@ -18719,7 +18972,7 @@ Transform:
   m_GameObject: {fileID: 597317712}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.2588186, w: 0.965926}
-  m_LocalPosition: {x: 0.7099991, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 0.7099991, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18804,6 +19057,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 597317712}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &597317717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 597317712}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &598307609
 GameObject:
   m_ObjectHideFlags: 0
@@ -19863,6 +20132,7 @@ GameObject:
   - component: {fileID: 621855275}
   - component: {fileID: 621855274}
   - component: {fileID: 621855273}
+  - component: {fileID: 621855276}
   m_Layer: 0
   m_Name: Cylinder (23)
   m_TagString: Untagged
@@ -19879,7 +20149,7 @@ Transform:
   m_GameObject: {fileID: 621855271}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.4999996, w: 0.8660257}
-  m_LocalPosition: {x: 3.0699997, y: 5.4800005, z: 13.97749}
+  m_LocalPosition: {x: 3.0699997, y: 5.480065, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -19964,6 +20234,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 621855271}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &621855276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 621855271}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &622801834
 GameObject:
   m_ObjectHideFlags: 0
@@ -20515,6 +20801,7 @@ GameObject:
   - component: {fileID: 642690536}
   - component: {fileID: 642690535}
   - component: {fileID: 642690534}
+  - component: {fileID: 642690537}
   m_Layer: 0
   m_Name: Cylinder (20)
   m_TagString: Untagged
@@ -20531,7 +20818,7 @@ Transform:
   m_GameObject: {fileID: 642690532}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6850395, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: -1.6850395, y: 5.48, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -20616,6 +20903,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 642690532}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &642690537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642690532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &644542891
 GameObject:
   m_ObjectHideFlags: 0
@@ -21208,14 +21511,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 661859424}
+      addedObject: {fileID: 661859427}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &661859421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 661859420}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &661859424
+--- !u!114 &661859427
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -21224,11 +21527,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 618601078}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &663270486
 GameObject:
   m_ObjectHideFlags: 0
@@ -21580,6 +21885,7 @@ GameObject:
   - component: {fileID: 670215618}
   - component: {fileID: 670215617}
   - component: {fileID: 670215616}
+  - component: {fileID: 670215619}
   m_Layer: 0
   m_Name: Cylinder (22)
   m_TagString: Untagged
@@ -21596,7 +21902,7 @@ Transform:
   m_GameObject: {fileID: 670215614}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.38268322, w: 0.9238797}
-  m_LocalPosition: {x: 1.8799992, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 1.8799992, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21681,6 +21987,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670215614}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &670215619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 670215614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1001 &671037547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21765,6 +22087,7 @@ GameObject:
   - component: {fileID: 671622911}
   - component: {fileID: 671622910}
   - component: {fileID: 671622909}
+  - component: {fileID: 671622912}
   m_Layer: 0
   m_Name: Cylinder (29)
   m_TagString: Untagged
@@ -21781,7 +22104,7 @@ Transform:
   m_GameObject: {fileID: 671622907}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70710707, w: 0.70710653}
-  m_LocalPosition: {x: 4.6, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 4.6, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21866,6 +22189,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 671622907}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &671622912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671622907}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &672395013
 GameObject:
   m_ObjectHideFlags: 0
@@ -21929,6 +22268,7 @@ GameObject:
   - component: {fileID: 679201214}
   - component: {fileID: 679201213}
   - component: {fileID: 679201212}
+  - component: {fileID: 679201215}
   m_Layer: 0
   m_Name: Cylinder (25)
   m_TagString: Untagged
@@ -21945,7 +22285,7 @@ Transform:
   m_GameObject: {fileID: 679201210}
   serializedVersion: 2
   m_LocalRotation: {x: -0.25881854, y: 0.965926, z: 0.00000003352761, w: 0.0000000745058}
-  m_LocalPosition: {x: 8.595764, y: 5.48, z: 13.977491}
+  m_LocalPosition: {x: 8.595764, y: 5.48, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -22030,6 +22370,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 679201210}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &679201215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679201210}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &679711378
 GameObject:
   m_ObjectHideFlags: 0
@@ -23512,14 +23868,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 729917751}
+      addedObject: {fileID: 729917754}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &729917748 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 729917747}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &729917751
+--- !u!114 &729917754
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23528,11 +23884,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 591787399}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &732280610
 GameObject:
   m_ObjectHideFlags: 0
@@ -23663,6 +24021,7 @@ GameObject:
   - component: {fileID: 748937703}
   - component: {fileID: 748937702}
   - component: {fileID: 748937701}
+  - component: {fileID: 748937704}
   m_Layer: 0
   m_Name: Cylinder (26)
   m_TagString: Untagged
@@ -23679,7 +24038,7 @@ Transform:
   m_GameObject: {fileID: 748937699}
   serializedVersion: 2
   m_LocalRotation: {x: -0.38268322, y: 0.9238797, z: 0.000000044703484, w: -0.000000037252903}
-  m_LocalPosition: {x: 7.425765, y: 5.48, z: 13.977491}
+  m_LocalPosition: {x: 7.425765, y: 5.48, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -23764,6 +24123,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 748937699}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &748937704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 748937699}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!4 &760888024 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: d677d0ec3933f2d4b9c76070305c8b67, type: 3}
@@ -23986,7 +24361,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 73972872}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &769415827
+--- !u!114 &769415830
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -23995,11 +24370,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 769415824}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &770027764
 GameObject:
   m_ObjectHideFlags: 0
@@ -24012,6 +24389,7 @@ GameObject:
   - component: {fileID: 770027768}
   - component: {fileID: 770027767}
   - component: {fileID: 770027766}
+  - component: {fileID: 770027769}
   m_Layer: 0
   m_Name: Cylinder (28)
   m_TagString: Untagged
@@ -24028,7 +24406,7 @@ Transform:
   m_GameObject: {fileID: 770027764}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000000014901159}
-  m_LocalPosition: {x: 10.990805, y: 5.48, z: 13.977486}
+  m_LocalPosition: {x: 10.990805, y: 5.4800644, z: 34.365723}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -24113,12 +24491,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 770027764}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &770027769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770027764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &774980600 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 505347393}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &774980603
+--- !u!114 &774980606
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24127,11 +24521,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 774980600}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1001 &778681053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24450,14 +24846,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 782071593}
+      addedObject: {fileID: 782071596}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &782071590 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 782071589}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &782071593
+--- !u!114 &782071596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -24466,11 +24862,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 547738252}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &783929659
 GameObject:
   m_ObjectHideFlags: 0
@@ -25489,14 +25887,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 808658439}
+      addedObject: {fileID: 808658442}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &808658436 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 808658435}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &808658439
+--- !u!114 &808658442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -25505,11 +25903,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 363163823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!4 &809611872 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471669776683367166, guid: 8e1471e805192fd4e902f7cc7eec8378, type: 3}
@@ -25527,6 +25927,7 @@ GameObject:
   - component: {fileID: 811405733}
   - component: {fileID: 811405732}
   - component: {fileID: 811405731}
+  - component: {fileID: 811405734}
   m_Layer: 0
   m_Name: Cylinder (26)
   m_TagString: Untagged
@@ -25543,7 +25944,7 @@ Transform:
   m_GameObject: {fileID: 811405729}
   serializedVersion: 2
   m_LocalRotation: {x: -0.38268322, y: 0.9238797, z: 0.000000044703484, w: -0.000000037252903}
-  m_LocalPosition: {x: 7.425765, y: 5.48, z: 13.977491}
+  m_LocalPosition: {x: 7.425765, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -25628,6 +26029,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 811405729}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &811405734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811405729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &814309192
 GameObject:
   m_ObjectHideFlags: 0
@@ -28037,6 +28454,7 @@ GameObject:
   - component: {fileID: 878836452}
   - component: {fileID: 878836451}
   - component: {fileID: 878836450}
+  - component: {fileID: 878836453}
   m_Layer: 0
   m_Name: Cylinder (25)
   m_TagString: Untagged
@@ -28053,7 +28471,7 @@ Transform:
   m_GameObject: {fileID: 878836448}
   serializedVersion: 2
   m_LocalRotation: {x: -0.25881854, y: 0.965926, z: 0.00000003352761, w: 0.0000000745058}
-  m_LocalPosition: {x: 8.595764, y: 5.48, z: 13.977491}
+  m_LocalPosition: {x: 8.595764, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28138,6 +28556,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878836448}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &878836453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878836448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1001 &880739182
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28228,6 +28662,7 @@ GameObject:
   - component: {fileID: 888833686}
   - component: {fileID: 888833685}
   - component: {fileID: 888833684}
+  - component: {fileID: 888833687}
   m_Layer: 0
   m_Name: Cylinder (20)
   m_TagString: Untagged
@@ -28244,7 +28679,7 @@ Transform:
   m_GameObject: {fileID: 888833682}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6850395, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: -1.6850395, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28329,6 +28764,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888833682}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &888833687
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888833682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &890682131
 GameObject:
   m_ObjectHideFlags: 0
@@ -28341,6 +28792,7 @@ GameObject:
   - component: {fileID: 890682135}
   - component: {fileID: 890682134}
   - component: {fileID: 890682133}
+  - component: {fileID: 890682136}
   m_Layer: 0
   m_Name: Cylinder (20)
   m_TagString: Untagged
@@ -28357,7 +28809,7 @@ Transform:
   m_GameObject: {fileID: 890682131}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6850395, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: -1.6850395, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -28442,6 +28894,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 890682131}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &890682136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890682131}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1001 &900078134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29190,14 +29658,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 917112162}
+      addedObject: {fileID: 917112165}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &917112159 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 917112158}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &917112162
+--- !u!114 &917112165
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -29206,11 +29674,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 551155346}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &921722500
 GameObject:
   m_ObjectHideFlags: 0
@@ -29337,6 +29807,7 @@ GameObject:
   - component: {fileID: 922281444}
   - component: {fileID: 922281443}
   - component: {fileID: 922281442}
+  - component: {fileID: 922281445}
   m_Layer: 0
   m_Name: Cylinder (23)
   m_TagString: Untagged
@@ -29353,7 +29824,7 @@ Transform:
   m_GameObject: {fileID: 922281440}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.4999996, w: 0.8660257}
-  m_LocalPosition: {x: 3.0699997, y: 5.4800005, z: 13.97749}
+  m_LocalPosition: {x: 3.0699997, y: 5.480065, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29438,6 +29909,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 922281440}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &922281445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922281440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &924700363
 GameObject:
   m_ObjectHideFlags: 0
@@ -29450,6 +29937,7 @@ GameObject:
   - component: {fileID: 924700367}
   - component: {fileID: 924700366}
   - component: {fileID: 924700365}
+  - component: {fileID: 924700368}
   m_Layer: 0
   m_Name: Cylinder (21)
   m_TagString: Untagged
@@ -29466,7 +29954,7 @@ Transform:
   m_GameObject: {fileID: 924700363}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.2588186, w: 0.965926}
-  m_LocalPosition: {x: 0.7099991, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 0.7099991, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -29551,6 +30039,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 924700363}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &924700368
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 924700363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &926908495
 GameObject:
   m_ObjectHideFlags: 0
@@ -30601,6 +31105,7 @@ GameObject:
   - component: {fileID: 950917446}
   - component: {fileID: 950917445}
   - component: {fileID: 950917444}
+  - component: {fileID: 950917447}
   m_Layer: 0
   m_Name: Cylinder (20)
   m_TagString: Untagged
@@ -30617,7 +31122,7 @@ Transform:
   m_GameObject: {fileID: 950917442}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6850395, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: -1.6850395, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -30702,6 +31207,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950917442}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &950917447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 950917442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &959494575
 GameObject:
   m_ObjectHideFlags: 0
@@ -31859,6 +32380,7 @@ GameObject:
   - component: {fileID: 989614665}
   - component: {fileID: 989614664}
   - component: {fileID: 989614663}
+  - component: {fileID: 989614666}
   m_Layer: 0
   m_Name: Cylinder (28)
   m_TagString: Untagged
@@ -31875,7 +32397,7 @@ Transform:
   m_GameObject: {fileID: 989614661}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000000014901159}
-  m_LocalPosition: {x: 10.990805, y: 5.48, z: 13.977486}
+  m_LocalPosition: {x: 10.990805, y: 5.48, z: 34.365723}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -31960,6 +32482,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 989614661}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &989614666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 989614661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &994962230
 GameObject:
   m_ObjectHideFlags: 0
@@ -31985,7 +32523,7 @@ Transform:
   m_GameObject: {fileID: 994962230}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 84.38, y: 6.4999995, z: -36.5}
+  m_LocalPosition: {x: 84.38, y: 6.4999995, z: -51}
   m_LocalScale: {x: 0.78787, y: 0.78787, z: 0.78787}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -36206,6 +36744,7 @@ GameObject:
   - component: {fileID: 1135903915}
   - component: {fileID: 1135903914}
   - component: {fileID: 1135903913}
+  - component: {fileID: 1135903916}
   m_Layer: 0
   m_Name: Cylinder (19)
   m_TagString: Untagged
@@ -36222,7 +36761,7 @@ Transform:
   m_GameObject: {fileID: 1135903911}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.13052596, w: 0.99144495}
-  m_LocalPosition: {x: -0.45999908, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: -0.45999908, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36307,6 +36846,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135903911}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1135903916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135903911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1138327140
 GameObject:
   m_ObjectHideFlags: 0
@@ -36572,6 +37127,7 @@ GameObject:
   - component: {fileID: 1151134311}
   - component: {fileID: 1151134310}
   - component: {fileID: 1151134309}
+  - component: {fileID: 1151134312}
   m_Layer: 0
   m_Name: Cylinder (20)
   m_TagString: Untagged
@@ -36588,7 +37144,7 @@ Transform:
   m_GameObject: {fileID: 1151134307}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.6850395, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: -1.6850395, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -36673,6 +37229,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1151134307}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1151134312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1151134307}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1151212296
 GameObject:
   m_ObjectHideFlags: 0
@@ -37618,7 +38190,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2095923299}
+      addedObject: {fileID: 2095923302}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1200392042 stripped
 Transform:
@@ -37800,14 +38372,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1202459431}
+      addedObject: {fileID: 1202459434}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1202459428 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1202459427}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1202459431
+--- !u!114 &1202459434
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -37816,11 +38388,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 600635395}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1204671839
 GameObject:
   m_ObjectHideFlags: 0
@@ -38565,7 +39139,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1336393871}
+      addedObject: {fileID: 1336393874}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1216023426 stripped
 Transform:
@@ -39164,14 +39738,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1231294833}
+      addedObject: {fileID: 1231294836}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1231294830 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1231294829}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1231294833
+--- !u!114 &1231294836
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -39180,11 +39754,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 374043874}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!4 &1235109932 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471669776683367166, guid: 8e1471e805192fd4e902f7cc7eec8378, type: 3}
@@ -39742,6 +40318,7 @@ GameObject:
   - component: {fileID: 1263912342}
   - component: {fileID: 1263912341}
   - component: {fileID: 1263912340}
+  - component: {fileID: 1263912343}
   m_Layer: 0
   m_Name: Cylinder (27)
   m_TagString: Untagged
@@ -39758,7 +40335,7 @@ Transform:
   m_GameObject: {fileID: 1263912338}
   serializedVersion: 2
   m_LocalRotation: {x: -0.49999967, y: 0.86602557, z: 0.000000014901159, w: 0.0000000074505797}
-  m_LocalPosition: {x: 6.2357635, y: 5.4800005, z: 13.977492}
+  m_LocalPosition: {x: 6.2357635, y: 5.4800005, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -39843,6 +40420,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263912338}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1263912343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263912338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1271832566
 GameObject:
   m_ObjectHideFlags: 0
@@ -40235,6 +40828,7 @@ GameObject:
   - component: {fileID: 1284137142}
   - component: {fileID: 1284137141}
   - component: {fileID: 1284137140}
+  - component: {fileID: 1284137143}
   m_Layer: 0
   m_Name: Cylinder (21)
   m_TagString: Untagged
@@ -40251,7 +40845,7 @@ Transform:
   m_GameObject: {fileID: 1284137138}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.2588186, w: 0.965926}
-  m_LocalPosition: {x: 0.7099991, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 0.7099991, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40336,6 +40930,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1284137138}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1284137143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284137138}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1286535004
 GameObject:
   m_ObjectHideFlags: 0
@@ -40488,6 +41098,7 @@ GameObject:
   - component: {fileID: 1295045586}
   - component: {fileID: 1295045585}
   - component: {fileID: 1295045584}
+  - component: {fileID: 1295045587}
   m_Layer: 0
   m_Name: Cylinder (23)
   m_TagString: Untagged
@@ -40504,7 +41115,7 @@ Transform:
   m_GameObject: {fileID: 1295045582}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.4999996, w: 0.8660257}
-  m_LocalPosition: {x: 3.0699997, y: 5.4800005, z: 13.97749}
+  m_LocalPosition: {x: 3.0699997, y: 5.480065, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40589,6 +41200,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1295045582}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1295045587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295045582}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1295301500
 GameObject:
   m_ObjectHideFlags: 0
@@ -40848,7 +41475,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 510865094}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1298495337
+--- !u!114 &1298495340
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -40857,11 +41484,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1298495334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1300598026
 GameObject:
   m_ObjectHideFlags: 0
@@ -40874,6 +41503,7 @@ GameObject:
   - component: {fileID: 1300598030}
   - component: {fileID: 1300598029}
   - component: {fileID: 1300598028}
+  - component: {fileID: 1300598031}
   m_Layer: 0
   m_Name: Cylinder (25)
   m_TagString: Untagged
@@ -40890,7 +41520,7 @@ Transform:
   m_GameObject: {fileID: 1300598026}
   serializedVersion: 2
   m_LocalRotation: {x: -0.25881854, y: 0.965926, z: 0.00000003352761, w: 0.0000000745058}
-  m_LocalPosition: {x: 8.595764, y: 5.48, z: 13.977491}
+  m_LocalPosition: {x: 8.595764, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -40975,6 +41605,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300598026}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1300598031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300598026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1305499699
 GameObject:
   m_ObjectHideFlags: 0
@@ -41326,6 +41972,7 @@ GameObject:
   - component: {fileID: 1318657441}
   - component: {fileID: 1318657440}
   - component: {fileID: 1318657439}
+  - component: {fileID: 1318657442}
   m_Layer: 0
   m_Name: Cylinder (22)
   m_TagString: Untagged
@@ -41342,7 +41989,7 @@ Transform:
   m_GameObject: {fileID: 1318657437}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.38268322, w: 0.9238797}
-  m_LocalPosition: {x: 1.8799992, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 1.8799992, y: 5.48, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -41427,6 +42074,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1318657437}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1318657442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318657437}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1322305710
 GameObject:
   m_ObjectHideFlags: 0
@@ -41756,7 +42419,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1216023425}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1336393871
+--- !u!114 &1336393874
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41765,11 +42428,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1336393868}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1337142282
 GameObject:
   m_ObjectHideFlags: 0
@@ -42379,6 +43044,7 @@ GameObject:
   - component: {fileID: 1343129234}
   - component: {fileID: 1343129233}
   - component: {fileID: 1343129232}
+  - component: {fileID: 1343129235}
   m_Layer: 0
   m_Name: Cylinder (23)
   m_TagString: Untagged
@@ -42395,7 +43061,7 @@ Transform:
   m_GameObject: {fileID: 1343129230}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.4999996, w: 0.8660257}
-  m_LocalPosition: {x: 3.0699997, y: 5.4800005, z: 13.97749}
+  m_LocalPosition: {x: 3.0699997, y: 5.4800005, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -42480,6 +43146,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343129230}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1343129235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343129230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1001 &1343533997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -43967,7 +44649,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1475594324}
+      addedObject: {fileID: 1475594327}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1377377973 stripped
 Transform:
@@ -44714,6 +45396,7 @@ GameObject:
   - component: {fileID: 1400064706}
   - component: {fileID: 1400064705}
   - component: {fileID: 1400064704}
+  - component: {fileID: 1400064707}
   m_Layer: 0
   m_Name: Cylinder (24)
   m_TagString: Untagged
@@ -44730,7 +45413,7 @@ Transform:
   m_GameObject: {fileID: 1400064702}
   serializedVersion: 2
   m_LocalRotation: {x: -0.13052602, y: 0.9914449, z: -0.000000013038514, w: 0.000000059604638}
-  m_LocalPosition: {x: 9.765762, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 9.765762, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -44815,6 +45498,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1400064702}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1400064707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400064702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!4 &1401765490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471669776683367166, guid: 8e1471e805192fd4e902f7cc7eec8378, type: 3}
@@ -45193,6 +45892,7 @@ GameObject:
   - component: {fileID: 1409342932}
   - component: {fileID: 1409342931}
   - component: {fileID: 1409342930}
+  - component: {fileID: 1409342933}
   m_Layer: 0
   m_Name: Cylinder (21)
   m_TagString: Untagged
@@ -45209,7 +45909,7 @@ Transform:
   m_GameObject: {fileID: 1409342928}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.2588186, w: 0.965926}
-  m_LocalPosition: {x: 0.7099991, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 0.7099991, y: 5.48, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45294,6 +45994,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1409342928}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1409342933
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1409342928}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1419772702
 GameObject:
   m_ObjectHideFlags: 0
@@ -45306,6 +46022,7 @@ GameObject:
   - component: {fileID: 1419772706}
   - component: {fileID: 1419772705}
   - component: {fileID: 1419772704}
+  - component: {fileID: 1419772707}
   m_Layer: 0
   m_Name: Cylinder (28)
   m_TagString: Untagged
@@ -45322,7 +46039,7 @@ Transform:
   m_GameObject: {fileID: 1419772702}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0.000000014901159}
-  m_LocalPosition: {x: 10.990805, y: 5.48, z: 13.977486}
+  m_LocalPosition: {x: 10.990805, y: 5.4800644, z: 34.365723}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -45407,6 +46124,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419772702}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1419772707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419772702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1422631918
 GameObject:
   m_ObjectHideFlags: 0
@@ -45808,7 +46541,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2039455699}
+      addedObject: {fileID: 2039455702}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1431362078 stripped
 Transform:
@@ -46216,7 +46949,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1741274643}
+      addedObject: {fileID: 1741274646}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1444895817 stripped
 Transform:
@@ -46942,7 +47675,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1377377972}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1475594324
+--- !u!114 &1475594327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46951,11 +47684,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1475594321}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1478408932
 GameObject:
   m_ObjectHideFlags: 0
@@ -48878,14 +49613,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1516181904}
+      addedObject: {fileID: 1516181907}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1516181901 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1516181900}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1516181904
+--- !u!114 &1516181907
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48894,11 +49629,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1120227625}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1516930146
 GameObject:
   m_ObjectHideFlags: 0
@@ -49546,6 +50283,7 @@ GameObject:
   - component: {fileID: 1522382365}
   - component: {fileID: 1522382364}
   - component: {fileID: 1522382363}
+  - component: {fileID: 1522382366}
   m_Layer: 0
   m_Name: Cylinder (26)
   m_TagString: Untagged
@@ -49562,7 +50300,7 @@ Transform:
   m_GameObject: {fileID: 1522382361}
   serializedVersion: 2
   m_LocalRotation: {x: -0.38268322, y: 0.9238797, z: 0.000000044703484, w: -0.000000037252903}
-  m_LocalPosition: {x: 7.425765, y: 5.48, z: 13.977491}
+  m_LocalPosition: {x: 7.425765, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -49647,6 +50385,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1522382361}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1522382366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1522382361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1522711491
 GameObject:
   m_ObjectHideFlags: 0
@@ -50334,7 +51088,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1540444875}
-  - component: {fileID: 1540444876}
   m_Layer: 0
   m_Name: HexagonLamp (3)
   m_TagString: Untagged
@@ -50351,7 +51104,7 @@ Transform:
   m_GameObject: {fileID: 1540444874}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.98342764, w: 0.1813011}
-  m_LocalPosition: {x: 90.83, y: 4.18, z: -32.66}
+  m_LocalPosition: {x: 86.979996, y: 4.18, z: -32.67}
   m_LocalScale: {x: 0.46377, y: 0.46377, z: 0.46377}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -50366,20 +51119,6 @@ Transform:
   - {fileID: 1894700059}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 159.109}
---- !u!114 &1540444876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540444874}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
-  intensity: 2
 --- !u!1 &1541408806
 GameObject:
   m_ObjectHideFlags: 0
@@ -50706,6 +51445,7 @@ GameObject:
   - component: {fileID: 1566051190}
   - component: {fileID: 1566051189}
   - component: {fileID: 1566051188}
+  - component: {fileID: 1566051191}
   m_Layer: 0
   m_Name: Cylinder (26)
   m_TagString: Untagged
@@ -50722,7 +51462,7 @@ Transform:
   m_GameObject: {fileID: 1566051186}
   serializedVersion: 2
   m_LocalRotation: {x: -0.38268322, y: 0.9238797, z: 0.000000044703484, w: -0.000000037252903}
-  m_LocalPosition: {x: 7.425765, y: 5.48, z: 13.977491}
+  m_LocalPosition: {x: 7.425765, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -50807,6 +51547,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1566051186}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1566051191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1566051186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1001 &1568270022
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -50869,14 +51625,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1568270026}
+      addedObject: {fileID: 1568270029}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1568270023 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1568270022}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1568270026
+--- !u!114 &1568270029
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -50885,11 +51641,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1178740341}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!4 &1573361049 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471669776683367166, guid: 8e1471e805192fd4e902f7cc7eec8378, type: 3}
@@ -51097,14 +51855,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1578382519}
+      addedObject: {fileID: 1578382522}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1578382516 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1578382515}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1578382519
+--- !u!114 &1578382522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -51113,11 +51871,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 340020253}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1589148400
 GameObject:
   m_ObjectHideFlags: 0
@@ -51127,7 +51887,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1589148401}
-  - component: {fileID: 1589148402}
   m_Layer: 0
   m_Name: HexagonLamp
   m_TagString: Untagged
@@ -51144,7 +51903,7 @@ Transform:
   m_GameObject: {fileID: 1589148400}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.34377685, w: 0.93905145}
-  m_LocalPosition: {x: 92.66, y: 6.06, z: -32.66}
+  m_LocalPosition: {x: 88.81, y: 6.06, z: -32.67}
   m_LocalScale: {x: 0.46377, y: 0.46377, z: 0.46377}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51159,20 +51918,6 @@ Transform:
   - {fileID: 1377377973}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 40.214}
---- !u!114 &1589148402
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1589148400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
-  intensity: 2
 --- !u!1 &1597925344
 GameObject:
   m_ObjectHideFlags: 0
@@ -51411,6 +52156,7 @@ GameObject:
   - component: {fileID: 1601011995}
   - component: {fileID: 1601011994}
   - component: {fileID: 1601011993}
+  - component: {fileID: 1601011996}
   m_Layer: 0
   m_Name: Cylinder (27)
   m_TagString: Untagged
@@ -51427,7 +52173,7 @@ Transform:
   m_GameObject: {fileID: 1601011991}
   serializedVersion: 2
   m_LocalRotation: {x: -0.49999967, y: 0.86602557, z: 0.000000014901159, w: 0.0000000074505797}
-  m_LocalPosition: {x: 6.2357635, y: 5.4800005, z: 13.977492}
+  m_LocalPosition: {x: 6.2357635, y: 5.480065, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51512,6 +52258,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1601011991}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1601011996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1601011991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1602694010
 GameObject:
   m_ObjectHideFlags: 0
@@ -51786,6 +52548,7 @@ GameObject:
   - component: {fileID: 1613040898}
   - component: {fileID: 1613040897}
   - component: {fileID: 1613040896}
+  - component: {fileID: 1613040899}
   m_Layer: 0
   m_Name: Cylinder (29)
   m_TagString: Untagged
@@ -51802,7 +52565,7 @@ Transform:
   m_GameObject: {fileID: 1613040894}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.70710707, w: 0.70710653}
-  m_LocalPosition: {x: 4.6, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 4.6, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -51887,6 +52650,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1613040894}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1613040899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613040894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1614775723
 GameObject:
   m_ObjectHideFlags: 0
@@ -52563,6 +53342,7 @@ GameObject:
   - component: {fileID: 1637001683}
   - component: {fileID: 1637001682}
   - component: {fileID: 1637001681}
+  - component: {fileID: 1637001684}
   m_Layer: 0
   m_Name: Cylinder (22)
   m_TagString: Untagged
@@ -52579,7 +53359,7 @@ Transform:
   m_GameObject: {fileID: 1637001679}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.38268322, w: 0.9238797}
-  m_LocalPosition: {x: 1.8799992, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 1.8799992, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52664,6 +53444,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1637001679}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1637001684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1637001679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1638688419
 GameObject:
   m_ObjectHideFlags: 0
@@ -52676,6 +53472,7 @@ GameObject:
   - component: {fileID: 1638688423}
   - component: {fileID: 1638688422}
   - component: {fileID: 1638688421}
+  - component: {fileID: 1638688424}
   m_Layer: 0
   m_Name: Cylinder (19)
   m_TagString: Untagged
@@ -52692,7 +53489,7 @@ Transform:
   m_GameObject: {fileID: 1638688419}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.13052596, w: 0.99144495}
-  m_LocalPosition: {x: -0.45999908, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: -0.45999908, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -52777,6 +53574,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1638688419}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1638688424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1638688419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1639027108
 GameObject:
   m_ObjectHideFlags: 0
@@ -53765,6 +54578,7 @@ GameObject:
   - component: {fileID: 1679640779}
   - component: {fileID: 1679640778}
   - component: {fileID: 1679640777}
+  - component: {fileID: 1679640780}
   m_Layer: 0
   m_Name: Cylinder (25)
   m_TagString: Untagged
@@ -53781,7 +54595,7 @@ Transform:
   m_GameObject: {fileID: 1679640775}
   serializedVersion: 2
   m_LocalRotation: {x: -0.25881854, y: 0.965926, z: 0.00000003352761, w: 0.0000000745058}
-  m_LocalPosition: {x: 8.595764, y: 5.48, z: 13.977491}
+  m_LocalPosition: {x: 8.595764, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53866,6 +54680,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1679640775}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1679640780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679640775}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1681379203
 GameObject:
   m_ObjectHideFlags: 0
@@ -54172,14 +55002,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1685117078}
+      addedObject: {fileID: 1685117081}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1685117075 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1685117074}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1685117078
+--- !u!114 &1685117081
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54188,11 +55018,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 504751159}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1685848124
 GameObject:
   m_ObjectHideFlags: 0
@@ -54424,7 +55256,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 545522823}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1693937978
+--- !u!114 &1693937981
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -54433,11 +55265,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1693937975}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1699524162
 GameObject:
   m_ObjectHideFlags: 0
@@ -54613,7 +55447,7 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1783164570}
+      addedObject: {fileID: 1783164573}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1701145582 stripped
 Transform:
@@ -56006,7 +56840,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1444895816}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1741274643
+--- !u!114 &1741274646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56015,11 +56849,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1741274640}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1750481120 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 990903540611260484, guid: 8e1471e805192fd4e902f7cc7eec8378, type: 3}
@@ -56222,14 +57058,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1756485849}
+      addedObject: {fileID: 1756485852}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1756485846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1756485845}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1756485849
+--- !u!114 &1756485852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -56238,11 +57074,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 876916149}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1757591904
 GameObject:
   m_ObjectHideFlags: 0
@@ -56779,7 +57617,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1775189249}
-  - component: {fileID: 1775189250}
   m_Layer: 0
   m_Name: HexagonLamp (4)
   m_TagString: Untagged
@@ -56796,7 +57633,7 @@ Transform:
   m_GameObject: {fileID: 1775189248}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.7623331, w: 0.6471849}
-  m_LocalPosition: {x: 94.09, y: 3.51, z: -32.66}
+  m_LocalPosition: {x: 90.23999, y: 3.51, z: -32.67}
   m_LocalScale: {x: 0.46377, y: 0.46377, z: 0.46377}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -56811,20 +57648,6 @@ Transform:
   - {fileID: 782071590}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 99.341}
---- !u!114 &1775189250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1775189248}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
-  intensity: 2
 --- !u!1 &1778297790
 GameObject:
   m_ObjectHideFlags: 0
@@ -57056,7 +57879,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1701145581}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1783164570
+--- !u!114 &1783164573
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57065,11 +57888,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1783164567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!4 &1792597497 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 93365c6b77822dd49993dfd80d78a657, type: 3}
@@ -57080,7 +57905,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 454949005}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1793208852
+--- !u!114 &1793208855
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -57089,11 +57914,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1793208849}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1807041111
 GameObject:
   m_ObjectHideFlags: 0
@@ -57862,6 +58689,7 @@ GameObject:
   - component: {fileID: 1846581005}
   - component: {fileID: 1846581004}
   - component: {fileID: 1846581003}
+  - component: {fileID: 1846581006}
   m_Layer: 0
   m_Name: Cylinder (24)
   m_TagString: Untagged
@@ -57878,7 +58706,7 @@ Transform:
   m_GameObject: {fileID: 1846581001}
   serializedVersion: 2
   m_LocalRotation: {x: -0.13052602, y: 0.9914449, z: -0.000000013038514, w: 0.000000059604638}
-  m_LocalPosition: {x: 9.765762, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 9.765762, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -57963,6 +58791,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1846581001}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1846581006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1846581001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!4 &1847004907 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fa8446120c08c1f4aaf67235d581c546, type: 3}
@@ -58030,14 +58874,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1848027028}
+      addedObject: {fileID: 1848027031}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1848027025 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1848027024}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1848027028
+--- !u!114 &1848027031
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -58046,11 +58890,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1123246233}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1853028387
 GameObject:
   m_ObjectHideFlags: 0
@@ -58063,6 +58909,7 @@ GameObject:
   - component: {fileID: 1853028391}
   - component: {fileID: 1853028390}
   - component: {fileID: 1853028389}
+  - component: {fileID: 1853028392}
   m_Layer: 0
   m_Name: Cylinder (25)
   m_TagString: Untagged
@@ -58079,7 +58926,7 @@ Transform:
   m_GameObject: {fileID: 1853028387}
   serializedVersion: 2
   m_LocalRotation: {x: -0.25881854, y: 0.965926, z: 0.00000003352761, w: 0.0000000745058}
-  m_LocalPosition: {x: 8.595764, y: 5.48, z: 13.977491}
+  m_LocalPosition: {x: 8.595764, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58164,6 +59011,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853028387}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1853028392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1853028387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1853286224
 GameObject:
   m_ObjectHideFlags: 0
@@ -58439,6 +59302,7 @@ GameObject:
   - component: {fileID: 1868977334}
   - component: {fileID: 1868977333}
   - component: {fileID: 1868977332}
+  - component: {fileID: 1868977335}
   m_Layer: 0
   m_Name: Cylinder (19)
   m_TagString: Untagged
@@ -58455,7 +59319,7 @@ Transform:
   m_GameObject: {fileID: 1868977330}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.13052596, w: 0.99144495}
-  m_LocalPosition: {x: -0.45999908, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: -0.45999908, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -58540,6 +59404,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1868977330}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1868977335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1868977330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1872453066
 GameObject:
   m_ObjectHideFlags: 0
@@ -58950,6 +59830,7 @@ GameObject:
   - component: {fileID: 1884145806}
   - component: {fileID: 1884145805}
   - component: {fileID: 1884145804}
+  - component: {fileID: 1884145807}
   m_Layer: 0
   m_Name: Cylinder (24)
   m_TagString: Untagged
@@ -58966,7 +59847,7 @@ Transform:
   m_GameObject: {fileID: 1884145802}
   serializedVersion: 2
   m_LocalRotation: {x: -0.13052602, y: 0.9914449, z: -0.000000013038514, w: 0.000000059604638}
-  m_LocalPosition: {x: 9.765762, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 9.765762, y: 5.48, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -59051,6 +59932,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1884145802}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1884145807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1884145802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1888663087
 GameObject:
   m_ObjectHideFlags: 0
@@ -59523,14 +60420,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1894058841}
+      addedObject: {fileID: 1894058844}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1894058838 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1894058837}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1894058841
+--- !u!114 &1894058844
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59539,11 +60436,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 524822653}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1001 &1894700058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -59606,14 +60505,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1894700062}
+      addedObject: {fileID: 1894700065}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1894700059 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1894700058}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1894700062
+--- !u!114 &1894700065
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59622,11 +60521,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 76170490}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1896383829
 GameObject:
   m_ObjectHideFlags: 0
@@ -59936,14 +60837,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1905093717}
+      addedObject: {fileID: 1905093720}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1905093714 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1905093713}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1905093717
+--- !u!114 &1905093720
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -59952,11 +60853,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1091271823}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1911835660 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 990903540611260484, guid: 8e1471e805192fd4e902f7cc7eec8378, type: 3}
@@ -60068,6 +60971,7 @@ GameObject:
   - component: {fileID: 1918120617}
   - component: {fileID: 1918120616}
   - component: {fileID: 1918120615}
+  - component: {fileID: 1918120618}
   m_Layer: 0
   m_Name: Cylinder (22)
   m_TagString: Untagged
@@ -60084,7 +60988,7 @@ Transform:
   m_GameObject: {fileID: 1918120613}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.38268322, w: 0.9238797}
-  m_LocalPosition: {x: 1.8799992, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 1.8799992, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -60169,6 +61073,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1918120613}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1918120618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918120613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1918499993
 GameObject:
   m_ObjectHideFlags: 0
@@ -61830,14 +62750,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1991069531}
+      addedObject: {fileID: 1991069534}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &1991069528 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1991069527}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1991069531
+--- !u!114 &1991069534
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -61846,11 +62766,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1236472570}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &1998824195
 GameObject:
   m_ObjectHideFlags: 0
@@ -63101,7 +64023,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1431362077}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2039455699
+--- !u!114 &2039455702
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -63110,11 +64032,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2039455696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &2040685054
 GameObject:
   m_ObjectHideFlags: 0
@@ -64596,14 +65520,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2091237846}
+      addedObject: {fileID: 2091237849}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &2091237843 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 2091237842}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2091237846
+--- !u!114 &2091237849
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64612,11 +65536,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2086667937}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &2092281878
 GameObject:
   m_ObjectHideFlags: 0
@@ -64789,7 +65715,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 1200392041}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2095923299
+--- !u!114 &2095923302
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -64798,11 +65724,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2095923296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &2097537797
 GameObject:
   m_ObjectHideFlags: 0
@@ -65274,14 +66202,14 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2110701789}
+      addedObject: {fileID: 2110701792}
   m_SourcePrefab: {fileID: 100100000, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
 --- !u!4 &2110701786 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3611832764817e646a8f003a9bbd5bbe, type: 3}
   m_PrefabInstance: {fileID: 2110701785}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2110701789
+--- !u!114 &2110701792
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65290,11 +66218,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 634497111}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9cea9f5448564a842a4e8b1785c153b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RedBlueEmissionCycle
-  cycleSpeed: 1
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
   intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!4 &2110793346 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 471669776683367166, guid: 8e1471e805192fd4e902f7cc7eec8378, type: 3}
@@ -66014,6 +66944,7 @@ GameObject:
   - component: {fileID: 2140630847}
   - component: {fileID: 2140630846}
   - component: {fileID: 2140630845}
+  - component: {fileID: 2140630848}
   m_Layer: 0
   m_Name: Cylinder (22)
   m_TagString: Untagged
@@ -66030,7 +66961,7 @@ Transform:
   m_GameObject: {fileID: 2140630843}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0.38268322, w: 0.9238797}
-  m_LocalPosition: {x: 1.8799992, y: 5.48, z: 13.97749}
+  m_LocalPosition: {x: 1.8799992, y: 5.4800644, z: 34.365726}
   m_LocalScale: {x: 0.06308, y: 1.6299, z: 0.06308}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -66115,6 +67046,22 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140630843}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2140630848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140630843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46d7b46cf3e1c904cb843341d3f15d23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UnifiedEmissiveController
+  intensity: 20
+  switchInterval: 10
+  minSpeed: 1
+  maxSpeed: 4
 --- !u!1 &2141461331
 GameObject:
   m_ObjectHideFlags: 0
