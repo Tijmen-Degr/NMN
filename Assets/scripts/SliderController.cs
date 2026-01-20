@@ -1,14 +1,16 @@
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
 
 public class SliderController : MonoBehaviour
 {
-    public Text valueText;
+    public Text ScoreText;
     int progress = 0;
     public Slider slider;
 
     public void OnSliderChanged(float value) { 
-        valueText.text = value.ToString();
+        ScoreText.text = value.ToString();
     }
 
     public void UpdateProgress() {

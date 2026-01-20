@@ -25,6 +25,10 @@ public class BeatFlashPanel : MonoBehaviour
     public TMP_Text resultText;
     public float resultDisplayTime = 0.5f;
 
+    // Reference to your slider/progress controller
+    [Header("Progress")]
+    public SliderController sliderController;
+
     private EventInstance musicInstance;
     private bool isRunning = false;
 
@@ -44,6 +48,9 @@ public class BeatFlashPanel : MonoBehaviour
     private enum BeatInput { Left, Right }
     private BeatInput currentRequiredInput;
 
+    // track whether we've attached input handlers so we don't double-subscribe
+    private bool inputsAttached = false;
+
     [StructLayout(LayoutKind.Sequential)]
     struct TimelineBeatProperties
     {
@@ -55,32 +62,55 @@ public class BeatFlashPanel : MonoBehaviour
 
     private void Awake()
     {
-        controls = new PlayerControls();
+        if (controls == null)
+            controls = new PlayerControls();
+
+        // quick developer hint if UI references are missing
+        if (resultPanel == null || resultText == null)
+            Debug.LogWarning("[BeatFlashPanel] resultPanel or resultText is not assigned in the Inspector. Assign them to avoid exceptions.");
     }
 
     private void OnEnable()
     {
+        if (controls == null)
+            controls = new PlayerControls();
+
         controls.Enable();
-        controls.Gameplay.Mouse1.performed += ctx => OnHit(BeatInput.Left);
-        controls.Gameplay.Mouse2.performed += ctx => OnHit(BeatInput.Right);
+
+        if (!inputsAttached)
+        {
+            controls.Gameplay.Mouse1.performed += OnMouse1;
+            controls.Gameplay.Mouse2.performed += OnMouse2;
+            inputsAttached = true;
+        }
     }
 
     private void OnDisable()
     {
-        controls.Gameplay.Mouse1.performed -= ctx => OnHit(BeatInput.Left);
-        controls.Gameplay.Mouse2.performed -= ctx => OnHit(BeatInput.Right);
-        controls.Disable();
+        if (controls != null && inputsAttached)
+        {
+            controls.Gameplay.Mouse1.performed -= OnMouse1;
+            controls.Gameplay.Mouse2.performed -= OnMouse2;
+            inputsAttached = false;
+        }
+
+        if (controls != null)
+            controls.Disable();
     }
+
+    // Named handlers forward to OnHit so removal works
+    private void OnMouse1(InputAction.CallbackContext ctx) => OnHit(BeatInput.Left);
+    private void OnMouse2(InputAction.CallbackContext ctx) => OnHit(BeatInput.Right);
 
     public void StartBeatSystem()
     {
         if (isRunning) return;
         isRunning = true;
 
-        beatPanel.SetActive(false);
-        leftPanel.SetActive(false);
-        rightPanel.SetActive(false);
-        resultPanel.SetActive(false);
+        if (beatPanel != null) beatPanel.SetActive(false);
+        if (leftPanel != null) leftPanel.SetActive(false);
+        if (rightPanel != null) rightPanel.SetActive(false);
+        if (resultPanel != null) resultPanel.SetActive(false);
 
         musicInstance = RuntimeManager.CreateInstance(musicEvent);
 
@@ -102,8 +132,8 @@ public class BeatFlashPanel : MonoBehaviour
 
                 currentRequiredInput = UnityEngine.Random.value < 0.5f ? BeatInput.Left : BeatInput.Right;
 
-                leftPanel.SetActive(currentRequiredInput == BeatInput.Left);
-                rightPanel.SetActive(currentRequiredInput == BeatInput.Right);
+                if (leftPanel != null) leftPanel.SetActive(currentRequiredInput == BeatInput.Left);
+                if (rightPanel != null) rightPanel.SetActive(currentRequiredInput == BeatInput.Right);
             }
         }
 
@@ -112,7 +142,7 @@ public class BeatFlashPanel : MonoBehaviour
             scheduledFlashTimer -= Time.deltaTime;
             if (scheduledFlashTimer <= 0f)
             {
-                beatPanel.SetActive(true);
+                if (beatPanel != null) beatPanel.SetActive(true);
                 beatWindowOpen = true;
                 inputReceivedThisBeat = false;
                 flashTimer = flashDuration;
@@ -124,14 +154,18 @@ public class BeatFlashPanel : MonoBehaviour
             flashTimer -= Time.deltaTime;
             if (flashTimer <= 0f)
             {
-                beatPanel.SetActive(false);
+                if (beatPanel != null) beatPanel.SetActive(false);
                 beatWindowOpen = false;
-                leftPanel.SetActive(false);
-                rightPanel.SetActive(false);
+                if (leftPanel != null) leftPanel.SetActive(false);
+                if (rightPanel != null) rightPanel.SetActive(false);
 
-                // No input = MISS
+                // No input = MISS -> remove progress
                 if (!inputReceivedThisBeat)
+                {
+                    Debug.Log("[BeatFlashPanel] No input on beat -> MISS, removing progress.");
+                    sliderController?.RemoveProgress();
                     ShowResult("MISS", Color.red);
+                }
             }
         }
 
@@ -139,14 +173,21 @@ public class BeatFlashPanel : MonoBehaviour
         {
             resultTimer -= Time.deltaTime;
             if (resultTimer <= 0f)
-                resultPanel.SetActive(false);
+            {
+                if (resultPanel != null)
+                    resultPanel.SetActive(false);
+            }
         }
     }
 
     private void OnHit(BeatInput input)
     {
+        Debug.Log($"[BeatFlashPanel] OnHit called. beatWindowOpen={beatWindowOpen}, input={input}");
+
         if (!beatWindowOpen)
         {
+            Debug.Log("[BeatFlashPanel] Hit outside window -> MISS, removing progress.");
+            sliderController?.RemoveProgress();
             ShowResult("MISS", Color.red);
             return;
         }
@@ -154,16 +195,38 @@ public class BeatFlashPanel : MonoBehaviour
         inputReceivedThisBeat = true;
 
         if (input == currentRequiredInput)
+        {
+            Debug.Log("[BeatFlashPanel] CORRECT hit -> updating progress.");
+            sliderController?.UpdateProgress();
             ShowResult("CORRECT", Color.green);
+        }
         else
+        {
+            Debug.Log("[BeatFlashPanel] WRONG hit (within window).");
+            // optionally penalize here:
+            // sliderController?.RemoveProgress();
             ShowResult("WRONG", Color.yellow);
+        }
     }
 
     private void ShowResult(string text, Color color)
     {
-        resultPanel.SetActive(true);
-        resultText.text = text;
-        resultText.color = color;
+        // defensive: avoid throwing in input callbacks if designer forgot to assign UI
+        if (resultPanel != null)
+            resultPanel.SetActive(true);
+        else
+            Debug.LogWarning("[BeatFlashPanel] ShowResult called but resultPanel is not assigned.");
+
+        if (resultText != null)
+        {
+            resultText.text = text;
+            resultText.color = color;
+        }
+        else
+        {
+            Debug.LogWarning($"[BeatFlashPanel] ShowResult called but resultText is not assigned. text='{text}'");
+        }
+
         resultTimer = resultDisplayTime;
     }
 
@@ -177,6 +240,16 @@ public class BeatFlashPanel : MonoBehaviour
             musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             musicInstance.release();
         }
+
+        if (controls != null && inputsAttached)
+        {
+            controls.Gameplay.Mouse1.performed -= OnMouse1;
+            controls.Gameplay.Mouse2.performed -= OnMouse2;
+            inputsAttached = false;
+        }
+
+        if (controls != null)
+            controls.Disable();
     }
 
     // ============================

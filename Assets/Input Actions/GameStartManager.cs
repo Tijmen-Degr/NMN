@@ -11,12 +11,29 @@ public class GameStartManager : MonoBehaviour
 
     private void Awake()
     {
-        controls = new PlayerControls();
+        if (controls == null)
+            controls = new PlayerControls();
+
         controls.Gameplay.StartGameF.performed += OnStartGame;
     }
 
-    private void OnEnable() => controls.Enable();
-    private void OnDisable() => controls.Disable();
+    private void OnEnable()
+    {
+        if (controls == null)
+            controls = new PlayerControls();
+
+        controls.Enable();
+    }
+
+    private void OnDisable()
+    {
+        if (controls != null)
+        {
+            // unsubscribe to avoid leaks and NREs
+            controls.Gameplay.StartGameF.performed -= OnStartGame;
+            controls.Disable();
+        }
+    }
 
     private void OnStartGame(InputAction.CallbackContext context)
     {
