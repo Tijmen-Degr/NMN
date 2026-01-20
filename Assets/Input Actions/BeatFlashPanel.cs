@@ -5,12 +5,27 @@ using System;
 using System.Runtime.InteropServices;
 using TMPro;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class BeatFlashPanel : MonoBehaviour
 {
     [Header("FMOD")]
     public EventReference musicEvent;
-    public string cameraResetMarkerName = "Start Player Walk 2";
+
+    [Tooltip("Markers that reset the camera to original")]
+    public List<string> cameraResetMarkers = new List<string>
+    {
+        "Start Player Walk 2",
+        "Start Player Walk 3",
+        "PreEndGame"
+    };
+
+    [Tooltip("Marker that ends the game")]
+    public string endGameMarker = "EndGame";
+
+    [Header("Scene Transition")]
+    public string sceneToLoad;
 
     [Header("Minigame UI Root")]
     public GameObject minigameUIRoot;
@@ -34,7 +49,6 @@ public class BeatFlashPanel : MonoBehaviour
     public TMP_Text resultText;
     public float resultDisplayTime = 0.5f;
 
-    // Reference to your slider/progress controller
     [Header("Progress")]
     public SliderController sliderController;
 
@@ -52,7 +66,6 @@ public class BeatFlashPanel : MonoBehaviour
     private bool beatWindowOpen = false;
     private bool inputReceivedThisBeat = false;
 
-    // ===== Countdown state =====
     private bool countdownActive = false;
     private float countdownTimer = 0f;
     private bool minigameEnabled = false;
@@ -63,8 +76,8 @@ public class BeatFlashPanel : MonoBehaviour
     private volatile bool beatQueued = false;
     private volatile int queuedBeatNumber = 0;
     private volatile bool cameraResetQueued = false;
+    private volatile bool endGameQueued = false;
 
-    // track whether we've attached input handlers so we don't double-subscribe
     private bool inputsAttached = false;
 
     [StructLayout(LayoutKind.Sequential)]
@@ -85,27 +98,16 @@ public class BeatFlashPanel : MonoBehaviour
 
     private void Awake()
     {
-        if (controls == null)
-            controls = new PlayerControls();
-
-        // quick developer hint if UI references are missing
-        if (resultPanel == null || resultText == null)
-            Debug.LogWarning("[BeatFlashPanel] resultPanel or resultText is not assigned in the Inspector. Assign them to avoid exceptions.");
-
-        // find camera controller if available
+        controls ??= new PlayerControls();
         cameraController = FindObjectOfType<CameraController>();
     }
 
     private void OnEnable()
     {
-        if (controls == null)
-            controls = new PlayerControls();
-
         controls.Enable();
 
         if (!inputsAttached)
         {
-            // Use named handlers so we can unsubscribe reliably
             controls.Gameplay.Mouse1.performed += OnMouse1;
             controls.Gameplay.Mouse2.performed += OnMouse2;
             inputsAttached = true;
@@ -114,18 +116,16 @@ public class BeatFlashPanel : MonoBehaviour
 
     private void OnDisable()
     {
-        if (controls != null && inputsAttached)
+        if (inputsAttached)
         {
             controls.Gameplay.Mouse1.performed -= OnMouse1;
             controls.Gameplay.Mouse2.performed -= OnMouse2;
             inputsAttached = false;
         }
 
-        if (controls != null)
-            controls.Disable();
+        controls.Disable();
     }
 
-    // Named handlers forward to OnInput so removal works
     private void OnMouse1(InputAction.CallbackContext ctx) => OnInput(RequiredInput.Left);
     private void OnMouse2(InputAction.CallbackContext ctx) => OnInput(RequiredInput.Right);
 
@@ -134,12 +134,12 @@ public class BeatFlashPanel : MonoBehaviour
         if (isRunning) return;
         isRunning = true;
 
-        if (beatPanel != null) beatPanel.SetActive(false);
-        if (leftPanel != null) leftPanel.SetActive(false);
-        if (rightPanel != null) rightPanel.SetActive(false);
-        if (resultPanel != null) resultPanel.SetActive(false);
-        if (minigameUIRoot != null) minigameUIRoot.SetActive(false);
-        if (countdownPanel != null) countdownPanel.SetActive(false);
+        beatPanel?.SetActive(false);
+        leftPanel?.SetActive(false);
+        rightPanel?.SetActive(false);
+        resultPanel?.SetActive(false);
+        minigameUIRoot?.SetActive(false);
+        countdownPanel?.SetActive(false);
 
         musicInstance = RuntimeManager.CreateInstance(musicEvent);
 
@@ -154,9 +154,7 @@ public class BeatFlashPanel : MonoBehaviour
 
     private void Update()
     {
-        // ===============================
-        // CAMERA STATE → COUNTDOWN / UI
-        // ===============================
+        // Camera state → countdown / UI
         if (cameraController != null)
         {
             if (cameraController.CurrentView == CameraController.CameraView.Area)
@@ -170,47 +168,41 @@ public class BeatFlashPanel : MonoBehaviour
             }
         }
 
-        // ===============================
-        // COUNTDOWN
-        // ===============================
+        // Countdown
         if (countdownActive)
         {
             countdownTimer -= Time.deltaTime;
-            int displayNumber = Mathf.CeilToInt(countdownTimer);
-
-            if (countdownText != null)
-                countdownText.text = displayNumber.ToString();
+            countdownText.text = Mathf.CeilToInt(countdownTimer).ToString();
 
             if (countdownTimer <= 0f)
             {
                 countdownActive = false;
-                if (countdownPanel != null) countdownPanel.SetActive(false);
-
+                countdownPanel.SetActive(false);
                 minigameEnabled = true;
-                if (minigameUIRoot != null) minigameUIRoot.SetActive(true);
+                minigameUIRoot.SetActive(true);
             }
         }
 
-        // ===============================
-        // CAMERA RESET FROM FMOD
-        // ===============================
+        // Camera reset
         if (cameraResetQueued)
         {
             cameraResetQueued = false;
             cameraController?.ReturnToOriginal();
         }
 
-        // ===============================
-        // BEAT LOGIC (only if minigame enabled)
-        // ===============================
-        if (!minigameEnabled)
-            return;
+        // End game
+        if (endGameQueued)
+        {
+            endGameQueued = false;
+            SceneManager.LoadScene(sceneToLoad);
+        }
+
+        if (!minigameEnabled) return;
 
         if (beatQueued)
         {
             beatQueued = false;
 
-            // Only flash beats 1 & 3
             if (queuedBeatNumber == 1 || queuedBeatNumber == 3)
             {
                 anticipationTimer = anticipationTime;
@@ -219,54 +211,46 @@ public class BeatFlashPanel : MonoBehaviour
                     ? RequiredInput.Left
                     : RequiredInput.Right;
 
-                if (leftPanel != null) leftPanel.SetActive(currentInput == RequiredInput.Left);
-                if (rightPanel != null) rightPanel.SetActive(currentInput == RequiredInput.Right);
+                leftPanel.SetActive(currentInput == RequiredInput.Left);
+                rightPanel.SetActive(currentInput == RequiredInput.Right);
             }
         }
 
-        // Anticipation timing before beat flash
         if (anticipationTimer > 0f)
         {
             anticipationTimer -= Time.deltaTime;
             if (anticipationTimer <= 0f)
             {
-                if (beatPanel != null) beatPanel.SetActive(true);
+                beatPanel.SetActive(true);
                 beatWindowOpen = true;
                 inputReceivedThisBeat = false;
                 flashTimer = flashDuration;
             }
         }
 
-        // Flash panel duration
         if (flashTimer > 0f)
         {
             flashTimer -= Time.deltaTime;
             if (flashTimer <= 0f)
             {
-                if (beatPanel != null) beatPanel.SetActive(false);
+                beatPanel.SetActive(false);
                 beatWindowOpen = false;
-                if (leftPanel != null) leftPanel.SetActive(false);
-                if (rightPanel != null) rightPanel.SetActive(false);
+                leftPanel.SetActive(false);
+                rightPanel.SetActive(false);
 
-                // No input = MISS -> penalize via sliderController if assigned
                 if (!inputReceivedThisBeat)
                 {
-                    Debug.Log("[BeatFlashPanel] No input on beat -> MISS.");
                     sliderController?.AddMiss();
                     ShowResult("MISS", Color.red);
                 }
             }
         }
 
-        // Result timer
         if (resultTimer > 0f)
         {
             resultTimer -= Time.deltaTime;
             if (resultTimer <= 0f)
-            {
-                if (resultPanel != null)
-                    resultPanel.SetActive(false);
-            }
+                resultPanel.SetActive(false);
         }
     }
 
@@ -276,8 +260,8 @@ public class BeatFlashPanel : MonoBehaviour
         minigameEnabled = false;
         countdownTimer = countdownStart;
 
-        if (countdownPanel != null) countdownPanel.SetActive(true);
-        if (minigameUIRoot != null) minigameUIRoot.SetActive(false);
+        countdownPanel.SetActive(true);
+        minigameUIRoot.SetActive(false);
     }
 
     private void ResetMinigameUI()
@@ -285,18 +269,17 @@ public class BeatFlashPanel : MonoBehaviour
         countdownActive = false;
         minigameEnabled = false;
 
-        if (countdownPanel != null) countdownPanel.SetActive(false);
-        if (minigameUIRoot != null) minigameUIRoot.SetActive(false);
-        if (beatPanel != null) beatPanel.SetActive(false);
-        if (leftPanel != null) leftPanel.SetActive(false);
-        if (rightPanel != null) rightPanel.SetActive(false);
+        countdownPanel.SetActive(false);
+        minigameUIRoot.SetActive(false);
+        beatPanel.SetActive(false);
+        leftPanel.SetActive(false);
+        rightPanel.SetActive(false);
     }
 
     private void OnInput(RequiredInput input)
     {
         if (!beatWindowOpen || !minigameEnabled)
         {
-            Debug.Log("[BeatFlashPanel] Hit outside window -> MISS.");
             sliderController?.AddMiss();
             ShowResult("MISS", Color.red);
             return;
@@ -306,13 +289,11 @@ public class BeatFlashPanel : MonoBehaviour
 
         if (input == currentInput)
         {
-            Debug.Log("[BeatFlashPanel] CORRECT hit -> updating progress.");
             sliderController?.AddCorrect();
             ShowResult("CORRECT", Color.green);
         }
         else
         {
-            Debug.Log("[BeatFlashPanel] WRONG hit (within window).");
             sliderController?.AddWrong();
             ShowResult("WRONG", Color.yellow);
         }
@@ -320,22 +301,9 @@ public class BeatFlashPanel : MonoBehaviour
 
     private void ShowResult(string text, Color color)
     {
-        // defensive: avoid throwing in input callbacks if designer forgot to assign UI
-        if (resultPanel != null)
-            resultPanel.SetActive(true);
-        else
-            Debug.LogWarning("[BeatFlashPanel] ShowResult called but resultPanel is not assigned.");
-
-        if (resultText != null)
-        {
-            resultText.text = text;
-            resultText.color = color;
-        }
-        else
-        {
-            Debug.LogWarning($"[BeatFlashPanel] ShowResult called but resultText is not assigned. text='{text}'");
-        }
-
+        resultPanel.SetActive(true);
+        resultText.text = text;
+        resultText.color = color;
         resultTimer = resultDisplayTime;
     }
 
@@ -349,16 +317,6 @@ public class BeatFlashPanel : MonoBehaviour
             musicInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
             musicInstance.release();
         }
-
-        if (controls != null && inputsAttached)
-        {
-            controls.Gameplay.Mouse1.performed -= OnMouse1;
-            controls.Gameplay.Mouse2.performed -= OnMouse2;
-            inputsAttached = false;
-        }
-
-        if (controls != null)
-            controls.Disable();
     }
 
     private FMOD.RESULT OnFmodEventCallback(
@@ -366,8 +324,7 @@ public class BeatFlashPanel : MonoBehaviour
         IntPtr eventInstance,
         IntPtr parameters)
     {
-        if (!isRunning)
-            return FMOD.RESULT.OK;
+        if (!isRunning) return FMOD.RESULT.OK;
 
         if (type == EVENT_CALLBACK_TYPE.TIMELINE_BEAT)
         {
@@ -380,8 +337,11 @@ public class BeatFlashPanel : MonoBehaviour
             var marker = Marshal.PtrToStructure<TimelineMarkerProperties>(parameters);
             string markerName = Marshal.PtrToStringAnsi(marker.name);
 
-            if (markerName == cameraResetMarkerName)
+            if (cameraResetMarkers.Contains(markerName))
                 cameraResetQueued = true;
+
+            if (markerName == endGameMarker)
+                endGameQueued = true;
         }
 
         return FMOD.RESULT.OK;
