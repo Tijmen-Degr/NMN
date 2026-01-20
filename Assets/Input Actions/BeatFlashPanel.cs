@@ -91,7 +91,9 @@ public class BeatFlashPanel : MonoBehaviour
         // quick developer hint if UI references are missing
         if (resultPanel == null || resultText == null)
             Debug.LogWarning("[BeatFlashPanel] resultPanel or resultText is not assigned in the Inspector. Assign them to avoid exceptions.");
-            cameraController = FindFirstObjectByType<CameraController>();
+
+        // find camera controller if available
+        cameraController = FindObjectOfType<CameraController>();
     }
 
     private void OnEnable()
@@ -103,6 +105,7 @@ public class BeatFlashPanel : MonoBehaviour
 
         if (!inputsAttached)
         {
+            // Use named handlers so we can unsubscribe reliably
             controls.Gameplay.Mouse1.performed += OnMouse1;
             controls.Gameplay.Mouse2.performed += OnMouse2;
             inputsAttached = true;
@@ -122,9 +125,9 @@ public class BeatFlashPanel : MonoBehaviour
             controls.Disable();
     }
 
-    // Named handlers forward to OnHit so removal works
-    private void OnMouse1(InputAction.CallbackContext ctx) => OnHit(BeatInput.Left);
-    private void OnMouse2(InputAction.CallbackContext ctx) => OnHit(BeatInput.Right);
+    // Named handlers forward to OnInput so removal works
+    private void OnMouse1(InputAction.CallbackContext ctx) => OnInput(RequiredInput.Left);
+    private void OnMouse2(InputAction.CallbackContext ctx) => OnInput(RequiredInput.Right);
 
     public void StartBeatSystem()
     {
@@ -135,6 +138,8 @@ public class BeatFlashPanel : MonoBehaviour
         if (leftPanel != null) leftPanel.SetActive(false);
         if (rightPanel != null) rightPanel.SetActive(false);
         if (resultPanel != null) resultPanel.SetActive(false);
+        if (minigameUIRoot != null) minigameUIRoot.SetActive(false);
+        if (countdownPanel != null) countdownPanel.SetActive(false);
 
         musicInstance = RuntimeManager.CreateInstance(musicEvent);
 
@@ -173,15 +178,16 @@ public class BeatFlashPanel : MonoBehaviour
             countdownTimer -= Time.deltaTime;
             int displayNumber = Mathf.CeilToInt(countdownTimer);
 
-            countdownText.text = displayNumber.ToString();
+            if (countdownText != null)
+                countdownText.text = displayNumber.ToString();
 
             if (countdownTimer <= 0f)
             {
                 countdownActive = false;
-                countdownPanel.SetActive(false);
+                if (countdownPanel != null) countdownPanel.SetActive(false);
 
                 minigameEnabled = true;
-                minigameUIRoot.SetActive(true);
+                if (minigameUIRoot != null) minigameUIRoot.SetActive(true);
             }
         }
 
@@ -213,8 +219,8 @@ public class BeatFlashPanel : MonoBehaviour
                     ? RequiredInput.Left
                     : RequiredInput.Right;
 
-                if (leftPanel != null) leftPanel.SetActive(currentRequiredInput == BeatInput.Left);
-                if (rightPanel != null) rightPanel.SetActive(currentRequiredInput == BeatInput.Right);
+                if (leftPanel != null) leftPanel.SetActive(currentInput == RequiredInput.Left);
+                if (rightPanel != null) rightPanel.SetActive(currentInput == RequiredInput.Right);
             }
         }
 
@@ -242,11 +248,11 @@ public class BeatFlashPanel : MonoBehaviour
                 if (leftPanel != null) leftPanel.SetActive(false);
                 if (rightPanel != null) rightPanel.SetActive(false);
 
-                // No input = MISS -> remove progress
+                // No input = MISS -> penalize via sliderController if assigned
                 if (!inputReceivedThisBeat)
                 {
-                    Debug.Log("[BeatFlashPanel] No input on beat -> MISS, removing progress.");
-                    sliderController?.RemoveProgress();
+                    Debug.Log("[BeatFlashPanel] No input on beat -> MISS.");
+                    sliderController?.AddMiss();
                     ShowResult("MISS", Color.red);
                 }
             }
@@ -270,8 +276,8 @@ public class BeatFlashPanel : MonoBehaviour
         minigameEnabled = false;
         countdownTimer = countdownStart;
 
-        countdownPanel.SetActive(true);
-        minigameUIRoot.SetActive(false);
+        if (countdownPanel != null) countdownPanel.SetActive(true);
+        if (minigameUIRoot != null) minigameUIRoot.SetActive(false);
     }
 
     private void ResetMinigameUI()
@@ -279,36 +285,35 @@ public class BeatFlashPanel : MonoBehaviour
         countdownActive = false;
         minigameEnabled = false;
 
-        countdownPanel.SetActive(false);
-        minigameUIRoot.SetActive(false);
-        beatPanel.SetActive(false);
-        leftPanel.SetActive(false);
-        rightPanel.SetActive(false);
+        if (countdownPanel != null) countdownPanel.SetActive(false);
+        if (minigameUIRoot != null) minigameUIRoot.SetActive(false);
+        if (beatPanel != null) beatPanel.SetActive(false);
+        if (leftPanel != null) leftPanel.SetActive(false);
+        if (rightPanel != null) rightPanel.SetActive(false);
     }
 
     private void OnInput(RequiredInput input)
     {
         if (!beatWindowOpen || !minigameEnabled)
         {
-            Debug.Log("[BeatFlashPanel] Hit outside window -> MISS, removing progress.");
-            sliderController?.RemoveProgress();
+            Debug.Log("[BeatFlashPanel] Hit outside window -> MISS.");
+            sliderController?.AddMiss();
             ShowResult("MISS", Color.red);
             return;
         }
 
         inputReceivedThisBeat = true;
 
-        if (input == currentRequiredInput)
+        if (input == currentInput)
         {
             Debug.Log("[BeatFlashPanel] CORRECT hit -> updating progress.");
-            sliderController?.UpdateProgress();
+            sliderController?.AddCorrect();
             ShowResult("CORRECT", Color.green);
         }
         else
         {
             Debug.Log("[BeatFlashPanel] WRONG hit (within window).");
-            // optionally penalize here:
-            // sliderController?.RemoveProgress();
+            sliderController?.AddWrong();
             ShowResult("WRONG", Color.yellow);
         }
     }
