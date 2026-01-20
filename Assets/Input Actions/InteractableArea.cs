@@ -34,6 +34,7 @@ public class InteractablesManager : MonoBehaviour
     public void EnterInteractable(Interactable interactable)
     {
         currentInteractable = interactable;
+
         if (panel != null && panelText != null)
         {
             panel.SetActive(true);
@@ -46,6 +47,7 @@ public class InteractablesManager : MonoBehaviour
         if (currentInteractable == interactable)
         {
             currentInteractable = null;
+
             if (panel != null)
                 panel.SetActive(false);
         }
@@ -53,13 +55,18 @@ public class InteractablesManager : MonoBehaviour
 
     private void OnInteractPerformed(InputAction.CallbackContext context)
     {
-        if (currentInteractable != null)
-        {
-            currentInteractable.OnInteract();
-        }
+        if (currentInteractable == null)
+            return;
+
+        // 🔑 HIDE POPUP IMMEDIATELY ON INTERACT
+        if (panel != null)
+            panel.SetActive(false);
+
+        // Perform the interaction (camera move, etc.)
+        currentInteractable.OnInteract();
     }
 
-    // Called by Interactable to update the panel text
+    // Optional helper for interactables
     public void UpdateText(string newText)
     {
         if (panelText != null)
