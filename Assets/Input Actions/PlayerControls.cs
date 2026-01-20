@@ -136,6 +136,33 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Mouse1"",
+                    ""type"": ""Button"",
+                    ""id"": ""b0cb30ce-145b-4ae5-8b45-46729ab33808"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Mouse2"",
+                    ""type"": ""Button"",
+                    ""id"": ""4d744daa-95e6-4585-94c5-731d143ebfd6"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""StartGameF"",
+                    ""type"": ""Button"",
+                    ""id"": ""090af1ed-6f85-4bc4-9d5c-8b3f4be9e34f"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -193,6 +220,39 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
                     ""action"": ""Interact"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""90d1ff2e-39f8-4c75-9a70-c25e40e3ebd1"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""c1ddadfe-08ef-43bc-b8b7-4c0d0230facc"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""StartGameF"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""77734421-d241-4478-8393-31b010abb6fa"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Mouse2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -206,6 +266,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         m_Gameplay_MoveDown = m_Gameplay.FindAction("MoveDown", throwIfNotFound: true);
         m_Gameplay_MoveRight = m_Gameplay.FindAction("MoveRight", throwIfNotFound: true);
         m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
+        m_Gameplay_Mouse1 = m_Gameplay.FindAction("Mouse1", throwIfNotFound: true);
+        m_Gameplay_Mouse2 = m_Gameplay.FindAction("Mouse2", throwIfNotFound: true);
+        m_Gameplay_StartGameF = m_Gameplay.FindAction("StartGameF", throwIfNotFound: true);
     }
 
     ~@PlayerControls()
@@ -291,6 +354,9 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
     private readonly InputAction m_Gameplay_MoveDown;
     private readonly InputAction m_Gameplay_MoveRight;
     private readonly InputAction m_Gameplay_Interact;
+    private readonly InputAction m_Gameplay_Mouse1;
+    private readonly InputAction m_Gameplay_Mouse2;
+    private readonly InputAction m_Gameplay_StartGameF;
     /// <summary>
     /// Provides access to input actions defined in input action map "Gameplay".
     /// </summary>
@@ -322,6 +388,18 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// Provides access to the underlying input action "Gameplay/Interact".
         /// </summary>
         public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
+        /// <summary>
+        /// Provides access to the underlying input action "Gameplay/Mouse1".
+        /// </summary>
+        public InputAction @Mouse1 => m_Wrapper.m_Gameplay_Mouse1;
+        /// <summary>
+        /// Provides access to the underlying input action "Gameplay/Mouse2".
+        /// </summary>
+        public InputAction @Mouse2 => m_Wrapper.m_Gameplay_Mouse2;
+        /// <summary>
+        /// Provides access to the underlying input action "Gameplay/StartGameF".
+        /// </summary>
+        public InputAction @StartGameF => m_Wrapper.m_Gameplay_StartGameF;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -363,6 +441,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
+            @Mouse1.started += instance.OnMouse1;
+            @Mouse1.performed += instance.OnMouse1;
+            @Mouse1.canceled += instance.OnMouse1;
+            @Mouse2.started += instance.OnMouse2;
+            @Mouse2.performed += instance.OnMouse2;
+            @Mouse2.canceled += instance.OnMouse2;
+            @StartGameF.started += instance.OnStartGameF;
+            @StartGameF.performed += instance.OnStartGameF;
+            @StartGameF.canceled += instance.OnStartGameF;
         }
 
         /// <summary>
@@ -389,6 +476,15 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
+            @Mouse1.started -= instance.OnMouse1;
+            @Mouse1.performed -= instance.OnMouse1;
+            @Mouse1.canceled -= instance.OnMouse1;
+            @Mouse2.started -= instance.OnMouse2;
+            @Mouse2.performed -= instance.OnMouse2;
+            @Mouse2.canceled -= instance.OnMouse2;
+            @StartGameF.started -= instance.OnStartGameF;
+            @StartGameF.performed -= instance.OnStartGameF;
+            @StartGameF.canceled -= instance.OnStartGameF;
         }
 
         /// <summary>
@@ -464,5 +560,26 @@ public partial class @PlayerControls: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnInteract(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Mouse1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMouse1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "Mouse2" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnMouse2(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "StartGameF" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnStartGameF(InputAction.CallbackContext context);
     }
 }
