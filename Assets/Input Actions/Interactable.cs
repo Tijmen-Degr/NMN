@@ -12,7 +12,8 @@ public class Interactable : MonoBehaviour
 
     private void Awake()
     {
-        manager = FindObjectOfType<InteractablesManager>();
+        Interactable interactable = Object.FindFirstObjectByType<Interactable>();
+
     }
 
     private void OnTriggerEnter(Collider other)
