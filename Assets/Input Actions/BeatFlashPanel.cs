@@ -102,6 +102,12 @@ public class BeatFlashPanel : MonoBehaviour
         cameraController = FindObjectOfType<CameraController>();
     }
 
+    private void Start()
+    {
+        // 🎵 Start music automatically when the scene loads
+        StartBeatSystem();
+    }
+
     private void OnEnable()
     {
         controls.Enable();
